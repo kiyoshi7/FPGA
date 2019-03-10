@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232"  

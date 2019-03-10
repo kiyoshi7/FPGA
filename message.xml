@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>52101259</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CompUART/CompDataSelect/s_counter_2__N_84_I_0_set</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35921504</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232/impl1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/main.vhd(4): </Dynamic>
+            <Dynamic>main</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/main.vhd</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/main.vhd(11): </Dynamic>
+            <Dynamic>behav</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/main.vhd</Navigation>
+            <Navigation>11</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/uart.vhd(4): </Dynamic>
+            <Dynamic>uart</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/uart.vhd</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/uart.vhd(15): </Dynamic>
+            <Dynamic>behav</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/uart.vhd</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/clock.vhd(10): </Dynamic>
+            <Dynamic>clock</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/clock.vhd</Navigation>
+            <Navigation>10</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/clock.vhd(18): </Dynamic>
+            <Dynamic>clock_behav</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/clock.vhd</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/dataselect.vhd(6): </Dynamic>
+            <Dynamic>dataselect</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/dataselect.vhd</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/dataselect.vhd(17): </Dynamic>
+            <Dynamic>behav</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/dataselect.vhd</Navigation>
+            <Navigation>17</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/clkpll.vhd(14): </Dynamic>
+            <Dynamic>clkpll</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/clkpll.vhd</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/clkpll.vhd(23): </Dynamic>
+            <Dynamic>structure</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/clkpll.vhd</Navigation>
+            <Navigation>23</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/uart_tx.vhd(15): </Dynamic>
+            <Dynamic>uart_tx</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/uart_tx.vhd</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/uart_tx.vhd(30): </Dynamic>
+            <Dynamic>rtl</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/uart_tx.vhd</Navigation>
+            <Navigation>30</Navigation>
+        </Message>
+        <Message>
+            <ID>35921303</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/main.vhd(14): </Dynamic>
+            <Dynamic>&quot;1010101101111100&quot;</Dynamic>
+            <Dynamic>s_tx_data</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/main.vhd</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35921205</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/daniel/desktop/projects/fpga/lattice/rs232/main.vhd(9): </Dynamic>
+            <Dynamic>Main</Dynamic>
+            <Dynamic>behav</Dynamic>
+            <Navigation>c:/users/daniel/desktop/projects/fpga/lattice/rs232/main.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>T_test</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>r_TX_DV</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>o_SendData</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\CompUART/CompDataSelect/s_counter_i1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\CompUART/CompDataSelect/s_counter_i0</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\CompUART/CompDataSelect/s_counter_2__N_84_I_0_reset</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\CompUART/CompDataSelect/s_counter_i2_reset</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001752</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\CompUART/CompDataSelect/s_counter_2__N_84_I_0_reset</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>50001000</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CLKOS</Dynamic>
+            <Dynamic>FREQUENCY_PIN_CLKOS</Dynamic>
+            <Dynamic>PLLInst_0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061045</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=CompUART/w_TX_DONE loads=4 clock_loads=4
+   Signal=CompUART/CompDataSelect/s_counter_2__N_84 loads=3 clock_loads=1
+   Signal=CompClock/S_InternalClock loads=1 clock_loads=1</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=CompUART/w_TX_DONE loads=4 clock_loads=4
+   Signal=CompUART/CompDataSelect/s_counter_2__N_84 loads=3 clock_loads=1
+   Signal=CompClock/S_InternalClock loads=1 clock_loads=1</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

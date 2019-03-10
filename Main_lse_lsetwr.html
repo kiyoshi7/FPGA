@@ -1,0 +1,359 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun Mar 10 20:01:02 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     Main
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets \CompUART/CompDataSelect/s_counter_2__N_84]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets \CompUART/w_TX_DONE]
+            27 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 0.215ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S1B     CK             \CompUART/CompDataSelect/s_counter_i2_set  (from \CompUART/w_TX_DONE +)
+   Destination:    FD1S3DX    CD             \CompUART/CompDataSelect/s_counter_i0  (to \CompUART/w_TX_DONE +)
+
+   Delay:                   4.639ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.639ns data_path \CompUART/CompDataSelect/s_counter_i2_set to \CompUART/CompDataSelect/s_counter_i0 meets
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 0.215ns
+
+ Path Details: \CompUART/CompDataSelect/s_counter_i2_set to \CompUART/CompDataSelect/s_counter_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \CompUART/CompDataSelect/s_counter_i2_set (from \CompUART/w_TX_DONE)
+Route         3   e 1.099                                  \CompUART/CompDataSelect/n437
+LUT4        ---     0.448              B to Z              \CompUART/CompDataSelect/i375_3_lut_rep_17
+Route         8   e 1.287                                  \CompUART/CompDataSelect/n764
+LUT4        ---     0.448              B to Z              \CompUART/CompDataSelect/s_counter_2__N_85_I_0_2_lut_2_lut_4_lut
+Route         2   e 0.954                                  \CompUART/CompDataSelect/s_counter_2__N_88
+                  --------
+                    4.639  (28.0% logic, 72.0% route), 3 logic levels.
+
+
+Passed:  The following path meets requirements by 0.215ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S1B     CK             \CompUART/CompDataSelect/s_counter_i2_set  (from \CompUART/w_TX_DONE +)
+   Destination:    FD1S1B     D              \CompUART/CompDataSelect/s_counter_i2_set  (to \CompUART/w_TX_DONE +)
+
+   Delay:                   4.639ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.639ns data_path \CompUART/CompDataSelect/s_counter_i2_set to \CompUART/CompDataSelect/s_counter_i2_set meets
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 0.215ns
+
+ Path Details: \CompUART/CompDataSelect/s_counter_i2_set to \CompUART/CompDataSelect/s_counter_i2_set
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \CompUART/CompDataSelect/s_counter_i2_set (from \CompUART/w_TX_DONE)
+Route         3   e 1.099                                  \CompUART/CompDataSelect/n437
+LUT4        ---     0.448              B to Z              \CompUART/CompDataSelect/i375_3_lut_rep_17
+Route         8   e 1.287                                  \CompUART/CompDataSelect/n764
+LUT4        ---     0.448              B to Z              \CompUART/CompDataSelect/i15_3_lut
+Route         2   e 0.954                                  \CompUART/CompDataSelect/s_counter_2__N_81[2]
+                  --------
+                    4.639  (28.0% logic, 72.0% route), 3 logic levels.
+
+
+Passed:  The following path meets requirements by 0.215ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S1B     CK             \CompUART/CompDataSelect/s_counter_i2_set  (from \CompUART/w_TX_DONE +)
+   Destination:    FD1S3DX    CD             \CompUART/CompDataSelect/s_counter_i1  (to \CompUART/w_TX_DONE +)
+
+   Delay:                   4.639ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.639ns data_path \CompUART/CompDataSelect/s_counter_i2_set to \CompUART/CompDataSelect/s_counter_i1 meets
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 0.215ns
+
+ Path Details: \CompUART/CompDataSelect/s_counter_i2_set to \CompUART/CompDataSelect/s_counter_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \CompUART/CompDataSelect/s_counter_i2_set (from \CompUART/w_TX_DONE)
+Route         3   e 1.099                                  \CompUART/CompDataSelect/n437
+LUT4        ---     0.448              B to Z              \CompUART/CompDataSelect/i375_3_lut_rep_17
+Route         8   e 1.287                                  \CompUART/CompDataSelect/n764
+LUT4        ---     0.448              B to Z              \CompUART/CompDataSelect/s_counter_2__N_85_I_0_2_lut_2_lut_4_lut
+Route         2   e 0.954                                  \CompUART/CompDataSelect/s_counter_2__N_88
+                  --------
+                    4.639  (28.0% logic, 72.0% route), 3 logic levels.
+
+Report: 4.785 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets T_test_c]
+            276 items scored, 65 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.230ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \CompUART/CompRS232/r_Clk_Count_99__i1  (from T_test_c +)
+   Destination:    FD1S3IX    D              \CompUART/CompRS232/r_SM_Main_i0  (to T_test_c +)
+
+   Delay:                   8.084ns  (32.7% logic, 67.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.084ns data_path \CompUART/CompRS232/r_Clk_Count_99__i1 to \CompUART/CompRS232/r_SM_Main_i0 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.230ns
+
+ Path Details: \CompUART/CompRS232/r_Clk_Count_99__i1 to \CompUART/CompRS232/r_SM_Main_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \CompUART/CompRS232/r_Clk_Count_99__i1 (from T_test_c)
+Route         2   e 1.002                                  \CompUART/CompRS232/r_Clk_Count[1]
+LUT4        ---     0.448              B to Z              \CompUART/CompRS232/i535_3_lut
+Route         1   e 0.788                                  \CompUART/CompRS232/n600
+LUT4        ---     0.448              D to Z              \CompUART/CompRS232/i1_4_lut_adj_1
+Route         8   e 1.287                                  \CompUART/CompRS232/r_SM_Main_2__N_61[1]
+LUT4        ---     0.448              D to Z              \CompUART/CompRS232/i4_4_lut
+Route         1   e 0.788                                  \CompUART/r_SM_Main_2__N_58[0]
+LUT4        ---     0.448              D to Z              \CompUART/CompDataSelect/i192_3_lut_4_lut
+Route         1   e 0.788                                  \CompUART/n250
+LUT4        ---     0.448              A to Z              \CompUART/CompRS232/i193_3_lut
+Route         1   e 0.788                                  \CompUART/CompRS232/n251
+                  --------
+                    8.084  (32.7% logic, 67.3% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.230ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \CompUART/CompRS232/r_Clk_Count_99__i2  (from T_test_c +)
+   Destination:    FD1S3IX    D              \CompUART/CompRS232/r_SM_Main_i0  (to T_test_c +)
+
+   Delay:                   8.084ns  (32.7% logic, 67.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.084ns data_path \CompUART/CompRS232/r_Clk_Count_99__i2 to \CompUART/CompRS232/r_SM_Main_i0 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.230ns
+
+ Path Details: \CompUART/CompRS232/r_Clk_Count_99__i2 to \CompUART/CompRS232/r_SM_Main_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \CompUART/CompRS232/r_Clk_Count_99__i2 (from T_test_c)
+Route         2   e 1.002                                  \CompUART/CompRS232/r_Clk_Count[2]
+LUT4        ---     0.448              C to Z              \CompUART/CompRS232/i535_3_lut
+Route         1   e 0.788                                  \CompUART/CompRS232/n600
+LUT4        ---     0.448              D to Z              \CompUART/CompRS232/i1_4_lut_adj_1
+Route         8   e 1.287                                  \CompUART/CompRS232/r_SM_Main_2__N_61[1]
+LUT4        ---     0.448              D to Z              \CompUART/CompRS232/i4_4_lut
+Route         1   e 0.788                                  \CompUART/r_SM_Main_2__N_58[0]
+LUT4        ---     0.448              D to Z              \CompUART/CompDataSelect/i192_3_lut_4_lut
+Route         1   e 0.788                                  \CompUART/n250
+LUT4        ---     0.448              A to Z              \CompUART/CompRS232/i193_3_lut
+Route         1   e 0.788                                  \CompUART/CompRS232/n251
+                  --------
+                    8.084  (32.7% logic, 67.3% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.230ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \CompUART/CompRS232/r_Clk_Count_99__i3  (from T_test_c +)
+   Destination:    FD1S3IX    D              \CompUART/CompRS232/r_SM_Main_i0  (to T_test_c +)
+
+   Delay:                   8.084ns  (32.7% logic, 67.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.084ns data_path \CompUART/CompRS232/r_Clk_Count_99__i3 to \CompUART/CompRS232/r_SM_Main_i0 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.230ns
+
+ Path Details: \CompUART/CompRS232/r_Clk_Count_99__i3 to \CompUART/CompRS232/r_SM_Main_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \CompUART/CompRS232/r_Clk_Count_99__i3 (from T_test_c)
+Route         2   e 1.002                                  \CompUART/CompRS232/r_Clk_Count[3]
+LUT4        ---     0.448              A to Z              \CompUART/CompRS232/i535_3_lut
+Route         1   e 0.788                                  \CompUART/CompRS232/n600
+LUT4        ---     0.448              D to Z              \CompUART/CompRS232/i1_4_lut_adj_1
+Route         8   e 1.287                                  \CompUART/CompRS232/r_SM_Main_2__N_61[1]
+LUT4        ---     0.448              D to Z              \CompUART/CompRS232/i4_4_lut
+Route         1   e 0.788                                  \CompUART/r_SM_Main_2__N_58[0]
+LUT4        ---     0.448              D to Z              \CompUART/CompDataSelect/i192_3_lut_4_lut
+Route         1   e 0.788                                  \CompUART/n250
+LUT4        ---     0.448              A to Z              \CompUART/CompRS232/i193_3_lut
+Route         1   e 0.788                                  \CompUART/CompRS232/n251
+                  --------
+                    8.084  (32.7% logic, 67.3% route), 6 logic levels.
+
+Warning: 8.230 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets                          |             |             |
+\CompUART/CompDataSelect/s_counter_2__N_|             |             |
+84]                                     |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets \CompUART/w_TX_DONE]     |     5.000 ns|     4.785 ns|     3  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets T_test_c]                |     5.000 ns|     8.230 ns|     6 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\CompUART/CompRS232/r_SM_Main_2__N_61[1]|       8|      48|     73.85%
+                                        |        |        |
+\CompUART/CompRS232/n600                |       1|      45|     69.23%
+                                        |        |        |
+\CompUART/CompRS232/n445                |       7|      21|     32.31%
+                                        |        |        |
+\CompUART/CompRS232/r_Clk_Count[1]      |       2|      15|     23.08%
+                                        |        |        |
+\CompUART/CompRS232/r_Clk_Count[2]      |       2|      15|     23.08%
+                                        |        |        |
+\CompUART/CompRS232/r_Clk_Count[3]      |       2|      15|     23.08%
+                                        |        |        |
+\CompUART/T_test_c_enable_10            |       7|      14|     21.54%
+                                        |        |        |
+\CompUART/n775                          |       1|      14|     21.54%
+                                        |        |        |
+\CompUART/CompRS232/n251                |       1|      12|     18.46%
+                                        |        |        |
+\CompUART/CompRS232/T_test_c_enable_12  |       3|       9|     13.85%
+                                        |        |        |
+\CompUART/n250                          |       1|       9|     13.85%
+                                        |        |        |
+\CompUART/r_SM_Main_2__N_58[0]          |       1|       9|     13.85%
+                                        |        |        |
+\CompUART/CompRS232/r_SM_Main[0]        |      11|       7|     10.77%
+                                        |        |        |
+\CompUART/r_SM_Main[1]                  |      14|       7|     10.77%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 65  Score: 63692
+
+Constraints cover  303 paths, 78 nets, and 186 connections (73.2% coverage)
+
+
+Peak memory: 78536704 bytes, TRCE: 1753088 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

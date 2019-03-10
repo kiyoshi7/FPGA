@@ -1,0 +1,815 @@
+
+// Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.10.3.144
+// ldbanno -n Verilog -o UART_impl1_mapvo.vo -w -neg -gui UART_impl1_map.ncd 
+// Netlist created on Sat Mar 02 17:47:08 2019
+// Netlist written on Sat Mar 02 17:47:24 2019
+// Design is for device LCMXO3L-6900C
+// Design is for package CABGA256
+// Design is for performance grade 5
+
+`timescale 1 ns / 1 ps
+
+module Main ( INTO, OUTBOUND, MainClock, UARTREADY );
+  input  INTO;
+  output OUTBOUND, MainClock, UARTREADY;
+  wire   \CompRS232/r_Clk_Count_2 , \CompRS232/r_Clk_Count_1 , \CompRS232/n38 , 
+         \CompRS232/n39 , \CompRS232/OUTBOUND_c_enable_11 , \CompRS232/n304 , 
+         OUTBOUND_c, \CompRS232/n412 , \CompRS232/n413 , 
+         \CompRS232/r_Clk_Count_6 , \CompRS232/r_Clk_Count_5 , \CompRS232/n34 , 
+         \CompRS232/n35 , \CompRS232/n414 , \CompRS232/r_Clk_Count_4 , 
+         \CompRS232/r_Clk_Count_3 , \CompRS232/n36 , \CompRS232/n37 , 
+         \CompRS232/n7 , \CompRS232/n40 , \CompRS232/r_Bit_Index_1 , 
+         \CompRS232/n527 , \CompRS232/r_Bit_Index_0 , \CompRS232/n477 , 
+         \CompRS232/r_SM_Main_1 , \CompRS232/r_SM_Main_2 , 
+         \CompRS232/r_Bit_Index_2_N_12_1 , \CompRS232/r_Bit_Index_2_N_12_0 , 
+         \CompRS232/OUTBOUND_c_enable_5 , \CompRS232/r_Bit_Index_2 , 
+         \CompRS232/n528 , \CompRS232/r_Bit_Index_2_N_12_2 , 
+         \CompRS232/OUTBOUND_c_enable_3 , \CompRS232/r_SM_Main_0 , 
+         \CompRS232/r_SM_Main_2_N_47_1 , \CompRS232/n525 , 
+         \CompRS232/n3_adj_59 , \CompRS232/n3 , \CompRS232/n377 , 
+         \CompRS232/n470 , \CompRS232/o_TX_Done_N_56 , 
+         \CompRS232/OUTBOUND_c_enable_10 , UARTREADY_c, INTO_c, 
+         \CompClock/stdby_N_1 , MainClock_c, VCCI;
+
+  CompRS232_SLICE_0 \CompRS232/SLICE_0 ( .A1(\CompRS232/r_Clk_Count_2 ), 
+    .A0(\CompRS232/r_Clk_Count_1 ), .DI1(\CompRS232/n38 ), 
+    .DI0(\CompRS232/n39 ), .CE(\CompRS232/OUTBOUND_c_enable_11 ), 
+    .LSR(\CompRS232/n304 ), .CLK(OUTBOUND_c), .FCI(\CompRS232/n412 ), 
+    .F0(\CompRS232/n39 ), .Q0(\CompRS232/r_Clk_Count_1 ), .F1(\CompRS232/n38 ), 
+    .Q1(\CompRS232/r_Clk_Count_2 ), .FCO(\CompRS232/n413 ));
+  CompRS232_SLICE_1 \CompRS232/SLICE_1 ( .A1(\CompRS232/r_Clk_Count_6 ), 
+    .A0(\CompRS232/r_Clk_Count_5 ), .DI1(\CompRS232/n34 ), 
+    .DI0(\CompRS232/n35 ), .CE(\CompRS232/OUTBOUND_c_enable_11 ), 
+    .LSR(\CompRS232/n304 ), .CLK(OUTBOUND_c), .FCI(\CompRS232/n414 ), 
+    .F0(\CompRS232/n35 ), .Q0(\CompRS232/r_Clk_Count_5 ), .F1(\CompRS232/n34 ), 
+    .Q1(\CompRS232/r_Clk_Count_6 ));
+  CompRS232_SLICE_2 \CompRS232/SLICE_2 ( .A1(\CompRS232/r_Clk_Count_4 ), 
+    .A0(\CompRS232/r_Clk_Count_3 ), .DI1(\CompRS232/n36 ), 
+    .DI0(\CompRS232/n37 ), .CE(\CompRS232/OUTBOUND_c_enable_11 ), 
+    .LSR(\CompRS232/n304 ), .CLK(OUTBOUND_c), .FCI(\CompRS232/n413 ), 
+    .F0(\CompRS232/n37 ), .Q0(\CompRS232/r_Clk_Count_3 ), .F1(\CompRS232/n36 ), 
+    .Q1(\CompRS232/r_Clk_Count_4 ), .FCO(\CompRS232/n414 ));
+  CompRS232_SLICE_3 \CompRS232/SLICE_3 ( .A1(\CompRS232/n7 ), 
+    .DI1(\CompRS232/n40 ), .CE(\CompRS232/OUTBOUND_c_enable_11 ), 
+    .LSR(\CompRS232/n304 ), .CLK(OUTBOUND_c), .F1(\CompRS232/n40 ), 
+    .Q1(\CompRS232/n7 ), .FCO(\CompRS232/n412 ));
+  CompRS232_SLICE_4 \CompRS232/SLICE_4 ( .D1(\CompRS232/r_Bit_Index_1 ), 
+    .C1(\CompRS232/n527 ), .B1(\CompRS232/r_Bit_Index_0 ), 
+    .A1(\CompRS232/n477 ), .D0(\CompRS232/r_SM_Main_1 ), .C0(\CompRS232/n477 ), 
+    .B0(\CompRS232/r_SM_Main_2 ), .A0(\CompRS232/r_Bit_Index_0 ), 
+    .DI1(\CompRS232/r_Bit_Index_2_N_12_1 ), 
+    .DI0(\CompRS232/r_Bit_Index_2_N_12_0 ), 
+    .CE(\CompRS232/OUTBOUND_c_enable_5 ), .CLK(OUTBOUND_c), 
+    .F0(\CompRS232/r_Bit_Index_2_N_12_0 ), .Q0(\CompRS232/r_Bit_Index_0 ), 
+    .F1(\CompRS232/r_Bit_Index_2_N_12_1 ), .Q1(\CompRS232/r_Bit_Index_1 ));
+  CompRS232_SLICE_5 \CompRS232/SLICE_5 ( .B1(\CompRS232/r_Bit_Index_0 ), 
+    .A1(\CompRS232/r_Bit_Index_1 ), .D0(\CompRS232/r_Bit_Index_2 ), 
+    .C0(\CompRS232/n528 ), .B0(\CompRS232/r_SM_Main_2 ), 
+    .A0(\CompRS232/r_SM_Main_1 ), .DI0(\CompRS232/r_Bit_Index_2_N_12_2 ), 
+    .CE(\CompRS232/OUTBOUND_c_enable_3 ), .CLK(OUTBOUND_c), 
+    .F0(\CompRS232/r_Bit_Index_2_N_12_2 ), .Q0(\CompRS232/r_Bit_Index_2 ), 
+    .F1(\CompRS232/n528 ));
+  CompRS232_SLICE_6 \CompRS232/SLICE_6 ( .C1(\CompRS232/r_SM_Main_1 ), 
+    .B1(\CompRS232/r_SM_Main_0 ), .A1(\CompRS232/r_SM_Main_2_N_47_1 ), 
+    .D0(\CompRS232/r_SM_Main_0 ), .C0(\CompRS232/r_SM_Main_1 ), 
+    .B0(\CompRS232/n525 ), .A0(\CompRS232/r_SM_Main_2_N_47_1 ), 
+    .DI1(\CompRS232/n3_adj_59 ), .DI0(\CompRS232/n3 ), 
+    .LSR(\CompRS232/r_SM_Main_2 ), .CLK(OUTBOUND_c), .F0(\CompRS232/n3 ), 
+    .Q0(\CompRS232/r_SM_Main_0 ), .F1(\CompRS232/n3_adj_59 ), 
+    .Q1(\CompRS232/r_SM_Main_1 ));
+  CompRS232_SLICE_7 \CompRS232/SLICE_7 ( .B1(\CompRS232/r_SM_Main_0 ), 
+    .A1(\CompRS232/r_SM_Main_2_N_47_1 ), .D0(\CompRS232/r_Clk_Count_4 ), 
+    .C0(\CompRS232/r_Clk_Count_5 ), .B0(\CompRS232/r_Clk_Count_6 ), 
+    .A0(\CompRS232/n377 ), .DI0(\CompRS232/r_SM_Main_2_N_47_1 ), 
+    .LSR(\CompRS232/n470 ), .CLK(OUTBOUND_c), 
+    .F0(\CompRS232/r_SM_Main_2_N_47_1 ), .Q0(\CompRS232/r_SM_Main_2 ), 
+    .F1(\CompRS232/n477 ));
+  CompRS232_SLICE_8 \CompRS232/SLICE_8 ( .D1(\CompRS232/r_SM_Main_2_N_47_1 ), 
+    .C1(\CompRS232/r_SM_Main_2 ), .B1(\CompRS232/r_SM_Main_0 ), 
+    .A1(\CompRS232/r_SM_Main_1 ), .D0(\CompRS232/r_SM_Main_0 ), 
+    .C0(\CompRS232/r_SM_Main_1 ), .B0(\CompRS232/r_SM_Main_2 ), 
+    .A0(\CompRS232/r_SM_Main_2_N_47_1 ), .DI0(\CompRS232/o_TX_Done_N_56 ), 
+    .CE(\CompRS232/OUTBOUND_c_enable_10 ), .CLK(OUTBOUND_c), 
+    .F0(\CompRS232/o_TX_Done_N_56 ), .Q0(UARTREADY_c), 
+    .F1(\CompRS232/OUTBOUND_c_enable_5 ));
+  CompRS232_SLICE_9 \CompRS232/SLICE_9 ( .D1(\CompRS232/r_SM_Main_2 ), 
+    .C1(\CompRS232/r_SM_Main_2_N_47_1 ), .B1(\CompRS232/r_SM_Main_0 ), 
+    .A1(\CompRS232/r_SM_Main_1 ), .D0(\CompRS232/r_SM_Main_2 ), 
+    .C0(\CompRS232/r_SM_Main_2_N_47_1 ), .B0(\CompRS232/r_SM_Main_0 ), 
+    .A0(\CompRS232/r_SM_Main_1 ), .F0(\CompRS232/OUTBOUND_c_enable_3 ), 
+    .F1(\CompRS232/n304 ));
+  CompRS232_SLICE_10 \CompRS232/SLICE_10 ( .C1(\CompRS232/r_SM_Main_2 ), 
+    .B1(\CompRS232/r_SM_Main_0 ), .A1(\CompRS232/r_SM_Main_1 ), 
+    .C0(\CompRS232/r_SM_Main_0 ), .B0(\CompRS232/r_SM_Main_2 ), 
+    .A0(\CompRS232/r_SM_Main_1 ), .F0(\CompRS232/n470 ), 
+    .F1(\CompRS232/OUTBOUND_c_enable_11 ));
+  CompRS232_SLICE_11 \CompRS232/SLICE_11 ( .D1(\CompRS232/r_SM_Main_0 ), 
+    .C1(\CompRS232/r_SM_Main_2_N_47_1 ), .B1(\CompRS232/r_SM_Main_1 ), 
+    .A1(\CompRS232/r_SM_Main_2 ), .B0(\CompRS232/r_SM_Main_2 ), 
+    .A0(\CompRS232/r_SM_Main_1 ), .F0(\CompRS232/n527 ), 
+    .F1(\CompRS232/OUTBOUND_c_enable_10 ));
+  CompRS232_SLICE_12 \CompRS232/SLICE_12 ( .C1(\CompRS232/r_Clk_Count_2 ), 
+    .B1(\CompRS232/r_Clk_Count_3 ), .A1(\CompRS232/r_Clk_Count_1 ), 
+    .C0(\CompRS232/r_Bit_Index_2 ), .B0(\CompRS232/r_Bit_Index_0 ), 
+    .A0(\CompRS232/r_Bit_Index_1 ), .F0(\CompRS232/n525 ), 
+    .F1(\CompRS232/n377 ));
+  CompClock_SLICE_13 \CompClock/SLICE_13 ( .A0(INTO_c), 
+    .F0(\CompClock/stdby_N_1 ));
+  INTO INTO_I( .PADDI(INTO_c), .INTO(INTO));
+  UARTREADY UARTREADY_I( .PADDO(UARTREADY_c), .UARTREADY(UARTREADY));
+  MainClock MainClock_I( .PADDO(MainClock_c), .MainClock(MainClock));
+  OUTBOUND OUTBOUND_I( .PADDO(OUTBOUND_c), .OUTBOUND(OUTBOUND));
+  CompClock_Clock \CompClock/Clock ( .STDBY(INTO_c), .OSC(MainClock_c));
+  CompClock_CompPll_PLLInst_0 \CompClock/CompPll/PLLInst_0 ( 
+    .CLKI(MainClock_c), .CLKFB(OUTBOUND_c), .ENCLKOP(\CompClock/stdby_N_1 ), 
+    .CLKOP(OUTBOUND_c));
+  VHI VHI_INST( .Z(VCCI));
+  PUR PUR_INST( .PUR(VCCI));
+  GSR GSR_INST( .GSR(VCCI));
+endmodule
+
+module CompRS232_SLICE_0 ( input A1, A0, DI1, DI0, CE, LSR, CLK, FCI, output 
+    F0, Q0, F1, Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  vmuxregsre \CompRS232/r_Clk_Count_63__i2 ( .D0(VCCI), .D1(DI1_dly), 
+    .SD(VCCI), .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \CompRS232/r_Clk_Count_63__i1 ( .D0(VCCI), .D1(DI0_dly), 
+    .SD(VCCI), .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CompRS232/r_Clk_Count_63_add_4_3 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module vmuxregsre ( input D0, D1, SD, SP, CK, LSR, output Q );
+
+  FL1P3IY INST01( .D0(D0), .D1(D1), .SP(SP), .CK(CK), .SD(SD), .CD(LSR), .Q(Q));
+  defparam INST01.GSR = "DISABLED";
+endmodule
+
+module vcc ( output PWR1 );
+
+  VHI INST1( .Z(PWR1));
+endmodule
+
+module ccu2 ( input A0, B0, C0, D0, A1, B1, C1, D1, CI, output S0, S1, CO1 );
+
+  CCU2D inst1( .CIN(CI), .A0(A0), .B0(B0), .C0(C0), .D0(D0), .A1(A1), .B1(B1), 
+    .C1(C1), .D1(D1), .S0(S0), .S1(S1), .COUT(CO1));
+  defparam inst1.INIT0 = 16'hfaaa;
+  defparam inst1.INIT1 = 16'hfaaa;
+  defparam inst1.INJECT1_0 = "NO";
+  defparam inst1.INJECT1_1 = "NO";
+endmodule
+
+module gnd ( output PWR0 );
+
+  VLO INST1( .Z(PWR0));
+endmodule
+
+module CompRS232_SLICE_1 ( input A1, A0, DI1, DI0, CE, LSR, CLK, FCI, output 
+    F0, Q0, F1, Q1 );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  vmuxregsre \CompRS232/r_Clk_Count_63__i6 ( .D0(VCCI), .D1(DI1_dly), 
+    .SD(VCCI), .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \CompRS232/r_Clk_Count_63__i5 ( .D0(VCCI), .D1(DI0_dly), 
+    .SD(VCCI), .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CompRS232/r_Clk_Count_63_add_4_7 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1());
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module CompRS232_SLICE_2 ( input A1, A0, DI1, DI0, CE, LSR, CLK, FCI, output 
+    F0, Q0, F1, Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  vmuxregsre \CompRS232/r_Clk_Count_63__i4 ( .D0(VCCI), .D1(DI1_dly), 
+    .SD(VCCI), .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \CompRS232/r_Clk_Count_63__i3 ( .D0(VCCI), .D1(DI0_dly), 
+    .SD(VCCI), .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CompRS232/r_Clk_Count_63_add_4_5 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module CompRS232_SLICE_3 ( input A1, DI1, CE, LSR, CLK, output F1, Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, CE_dly, LSR_dly;
+
+  vmuxregsre \CompRS232/r_Clk_Count_63__i0 ( .D0(VCCI), .D1(DI1_dly), 
+    .SD(VCCI), .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ccu20001 \CompRS232/r_Clk_Count_63_add_4_1 ( .A0(GNDI), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(GNDI), .S0(), 
+    .S1(F1), .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module ccu20001 ( input A0, B0, C0, D0, A1, B1, C1, D1, CI, output S0, S1, CO1 );
+
+  CCU2D inst1( .CIN(CI), .A0(A0), .B0(B0), .C0(C0), .D0(D0), .A1(A1), .B1(B1), 
+    .C1(C1), .D1(D1), .S0(S0), .S1(S1), .COUT(CO1));
+  defparam inst1.INIT0 = 16'hF000;
+  defparam inst1.INIT1 = 16'h0555;
+  defparam inst1.INJECT1_0 = "NO";
+  defparam inst1.INJECT1_1 = "NO";
+endmodule
+
+module CompRS232_SLICE_4 ( input D1, C1, B1, A1, D0, C0, B0, A0, DI1, DI0, CE, 
+    CLK, output F0, Q0, F1, Q1 );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut4 \CompRS232/i3_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40002 \CompRS232/i418_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  vmuxregsre0003 \CompRS232/r_Bit_Index_i1 ( .D0(VCCI), .D1(DI1_dly), 
+    .SD(VCCI), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre0003 \CompRS232/r_Bit_Index_i0 ( .D0(VCCI), .D1(DI0_dly), 
+    .SD(VCCI), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut4 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h1040) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40002 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0100) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module vmuxregsre0003 ( input D0, D1, SD, SP, CK, LSR, output Q );
+
+  FL1P3DX INST01( .D0(D0), .D1(D1), .SP(SP), .CK(CK), .SD(SD), .CD(LSR), .Q(Q));
+  defparam INST01.GSR = "DISABLED";
+endmodule
+
+module CompRS232_SLICE_5 ( input B1, A1, D0, C0, B0, A0, DI0, CE, CLK, output 
+    F0, Q0, F1 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, CE_dly;
+
+  lut40004 \CompRS232/i80_2_lut_rep_10 ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40005 \CompRS232/i1_4_lut_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  vmuxregsre0003 \CompRS232/r_Bit_Index_i2 ( .D0(VCCI), .D1(DI0_dly), 
+    .SD(VCCI), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40004 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8888) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40005 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0220) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CompRS232_SLICE_6 ( input C1, B1, A1, D0, C0, B0, A0, DI1, DI0, LSR, 
+    CLK, output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40006 \CompRS232/i142_2_lut_3_lut ( .A(A1), .B(B1), .C(C1), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40007 \CompRS232/r_SM_Main_2__I_0_52_Mux_0_i3_4_lut ( .A(A0), .B(B0), 
+    .C(C0), .D(D0), .Z(F0));
+  vmuxregsre \CompRS232/r_SM_Main_i1 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \CompRS232/r_SM_Main_i0 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40006 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h7878) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40007 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h558F) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CompRS232_SLICE_7 ( input B1, A1, D0, C0, B0, A0, DI0, LSR, CLK, 
+    output F0, Q0, F1 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, LSR_dly;
+
+  lut40008 \CompRS232/i388_2_lut ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40009 \CompRS232/i304_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  vmuxregsre \CompRS232/r_SM_Main_i2 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40008 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hDDDD) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40009 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hC8C0) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CompRS232_SLICE_8 ( input D1, C1, B1, A1, D0, C0, B0, A0, DI0, CE, CLK, 
+    output F0, Q0, F1 );
+  wire   VCCI, GNDI, DI0_dly, CLK_dly, CE_dly;
+
+  lut40010 \CompRS232/i22_3_lut_4_lut_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40011 \CompRS232/r_SM_Main_2__N_47_1__bdd_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+  vmuxregsre0003 \CompRS232/r_TX_Done_44 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40010 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hE3E1) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40011 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h200C) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CompRS232_SLICE_9 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40012 \CompRS232/i406_4_lut_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40013 \CompRS232/i412_3_lut_3_lut_4_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40012 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hEEF1) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40013 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hEE31) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CompRS232_SLICE_10 ( input C1, B1, A1, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40014 \CompRS232/i410_2_lut_rep_8_3_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40015 \CompRS232/i415_2_lut_3_lut ( .A(A0), .B(B0), .C(C0), .D(GNDI), 
+    .Z(F0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40014 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hEFEF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40015 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hDFDF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CompRS232_SLICE_11 ( input D1, C1, B1, A1, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40016 \CompRS232/i402_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40017 \CompRS232/i1_2_lut_rep_9 ( .A(A0), .B(B0), .C(GNDI), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40016 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hEABB) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40017 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h2222) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CompRS232_SLICE_12 ( input C1, B1, A1, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40018 \CompRS232/i298_3_lut ( .A(A1), .B(B1), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40019 \CompRS232/i2_2_lut_rep_7_3_lut ( .A(A0), .B(B0), .C(C0), .D(GNDI), 
+    .Z(F0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40018 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hECEC) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40019 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8080) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CompClock_SLICE_13 ( input A0, output F0 );
+  wire   GNDI;
+
+  lut40020 \CompClock/stdby_I_0_1_lut ( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40020 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h5555) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module INTO ( output PADDI, input INTO );
+
+  xo2iobuf INTO_pad( .Z(PADDI), .PAD(INTO));
+
+  specify
+    (INTO => PADDI) = (0:0:0,0:0:0);
+    $width (posedge INTO, 0:0:0);
+    $width (negedge INTO, 0:0:0);
+  endspecify
+
+endmodule
+
+module xo2iobuf ( output Z, input PAD );
+
+  IBPD INST1( .I(PAD), .O(Z));
+endmodule
+
+module UARTREADY ( input PADDO, output UARTREADY );
+  wire   GNDI;
+
+  xo2iobuf0021 UARTREADY_pad( .I(PADDO), .T(GNDI), .PAD(UARTREADY));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => UARTREADY) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module xo2iobuf0021 ( input I, T, output PAD );
+
+  OBZPD INST5( .I(I), .T(T), .O(PAD));
+endmodule
+
+module MainClock ( input PADDO, output MainClock );
+  wire   GNDI;
+
+  xo2iobuf0021 MainClock_pad( .I(PADDO), .T(GNDI), .PAD(MainClock));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => MainClock) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module OUTBOUND ( input PADDO, output OUTBOUND );
+  wire   GNDI;
+
+  xo2iobuf0021 OUTBOUND_pad( .I(PADDO), .T(GNDI), .PAD(OUTBOUND));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => OUTBOUND) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module CompClock_Clock ( input STDBY, output OSC );
+
+  OSCH_B \CompClock/Clock_OSCH ( .STDBY(STDBY), .OSC(OSC), .SEDSTDBY());
+endmodule
+
+module OSCH_B ( input STDBY, output OSC, SEDSTDBY );
+
+  OSCH INST10( .STDBY(STDBY), .OSC(OSC), .SEDSTDBY(SEDSTDBY));
+  defparam INST10.NOM_FREQ = "133.00";
+endmodule
+
+module CompClock_CompPll_PLLInst_0 ( input CLKI, CLKFB, ENCLKOP, output CLKOP );
+  wire   GNDI;
+
+  EHXPLLJ_B \CompClock/CompPll/PLLInst_0_EHXPLLJ ( .CLKI(CLKI), .CLKFB(CLKFB), 
+    .PHASESEL1(GNDI), .PHASESEL0(GNDI), .PHASEDIR(GNDI), .PHASESTEP(GNDI), 
+    .LOADREG(GNDI), .STDBY(GNDI), .PLLWAKESYNC(GNDI), .RST(GNDI), 
+    .RESETM(GNDI), .RESETC(GNDI), .RESETD(GNDI), .ENCLKOP(ENCLKOP), 
+    .ENCLKOS(GNDI), .ENCLKOS2(GNDI), .ENCLKOS3(GNDI), .PLLCLK(GNDI), 
+    .PLLRST(GNDI), .PLLSTB(GNDI), .PLLWE(GNDI), .PLLDATI7(GNDI), 
+    .PLLDATI6(GNDI), .PLLDATI5(GNDI), .PLLDATI4(GNDI), .PLLDATI3(GNDI), 
+    .PLLDATI2(GNDI), .PLLDATI1(GNDI), .PLLDATI0(GNDI), .PLLADDR4(GNDI), 
+    .PLLADDR3(GNDI), .PLLADDR2(GNDI), .PLLADDR1(GNDI), .PLLADDR0(GNDI), 
+    .CLKOP(CLKOP), .CLKOS(), .CLKOS2(), .CLKOS3(), .LOCK(), .INTLOCK(), 
+    .REFCLK(), .CLKINTFB(), .DPHSRC(), .PLLDATO7(), .PLLDATO6(), .PLLDATO5(), 
+    .PLLDATO4(), .PLLDATO3(), .PLLDATO2(), .PLLDATO1(), .PLLDATO0(), .PLLACK());
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (CLKI => CLKOP) = (0:0:0,0:0:0);
+    (CLKFB => CLKOP) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module EHXPLLJ_B ( input CLKI, CLKFB, PHASESEL1, PHASESEL0, PHASEDIR, 
+    PHASESTEP, LOADREG, STDBY, PLLWAKESYNC, RST, RESETM, RESETC, RESETD, 
+    ENCLKOP, ENCLKOS, ENCLKOS2, ENCLKOS3, PLLCLK, PLLRST, PLLSTB, PLLWE, 
+    PLLDATI7, PLLDATI6, PLLDATI5, PLLDATI4, PLLDATI3, PLLDATI2, PLLDATI1, 
+    PLLDATI0, PLLADDR4, PLLADDR3, PLLADDR2, PLLADDR1, PLLADDR0, output CLKOP, 
+    CLKOS, CLKOS2, CLKOS3, LOCK, INTLOCK, REFCLK, CLKINTFB, DPHSRC, PLLDATO7, 
+    PLLDATO6, PLLDATO5, PLLDATO4, PLLDATO3, PLLDATO2, PLLDATO1, PLLDATO0, 
+    PLLACK );
+
+  EHXPLLJ INST10( .CLKI(CLKI), .CLKFB(CLKFB), .PHASESEL1(PHASESEL1), 
+    .PHASESEL0(PHASESEL0), .PHASEDIR(PHASEDIR), .PHASESTEP(PHASESTEP), 
+    .LOADREG(LOADREG), .STDBY(STDBY), .PLLWAKESYNC(PLLWAKESYNC), .RST(RST), 
+    .RESETM(RESETM), .RESETC(RESETC), .RESETD(RESETD), .ENCLKOP(ENCLKOP), 
+    .ENCLKOS(ENCLKOS), .ENCLKOS2(ENCLKOS2), .ENCLKOS3(ENCLKOS3), 
+    .PLLCLK(PLLCLK), .PLLRST(PLLRST), .PLLSTB(PLLSTB), .PLLWE(PLLWE), 
+    .PLLADDR4(PLLADDR4), .PLLADDR3(PLLADDR3), .PLLADDR2(PLLADDR2), 
+    .PLLADDR1(PLLADDR1), .PLLADDR0(PLLADDR0), .PLLDATI7(PLLDATI7), 
+    .PLLDATI6(PLLDATI6), .PLLDATI5(PLLDATI5), .PLLDATI4(PLLDATI4), 
+    .PLLDATI3(PLLDATI3), .PLLDATI2(PLLDATI2), .PLLDATI1(PLLDATI1), 
+    .PLLDATI0(PLLDATI0), .CLKOP(CLKOP), .CLKOS(CLKOS), .CLKOS2(CLKOS2), 
+    .CLKOS3(CLKOS3), .LOCK(LOCK), .REFCLK(REFCLK), .INTLOCK(INTLOCK), 
+    .PLLDATO7(PLLDATO7), .PLLDATO6(PLLDATO6), .PLLDATO5(PLLDATO5), 
+    .PLLDATO4(PLLDATO4), .PLLDATO3(PLLDATO3), .PLLDATO2(PLLDATO2), 
+    .PLLDATO1(PLLDATO1), .PLLDATO0(PLLDATO0), .PLLACK(PLLACK), .DPHSRC(DPHSRC), 
+    .CLKINTFB(CLKINTFB));
+  defparam INST10.CLKFB_DIV = 1;
+  defparam INST10.CLKI_DIV = 13;
+  defparam INST10.CLKOP_CPHASE = 50;
+  defparam INST10.CLKOP_DIV = 51;
+  defparam INST10.CLKOP_ENABLE = "DISABLED";
+  defparam INST10.CLKOP_FPHASE = 0;
+  defparam INST10.CLKOP_TRIM_DELAY = 0;
+  defparam INST10.CLKOP_TRIM_POL = "RISING";
+  defparam INST10.CLKOS2_CPHASE = 0;
+  defparam INST10.CLKOS2_DIV = 1;
+  defparam INST10.CLKOS2_ENABLE = "DISABLED";
+  defparam INST10.CLKOS2_FPHASE = 0;
+  defparam INST10.CLKOS3_CPHASE = 0;
+  defparam INST10.CLKOS3_DIV = 1;
+  defparam INST10.CLKOS3_ENABLE = "DISABLED";
+  defparam INST10.CLKOS3_FPHASE = 0;
+  defparam INST10.CLKOS_CPHASE = 0;
+  defparam INST10.CLKOS_DIV = 1;
+  defparam INST10.CLKOS_ENABLE = "DISABLED";
+  defparam INST10.CLKOS_FPHASE = 0;
+  defparam INST10.CLKOS_TRIM_DELAY = 0;
+  defparam INST10.CLKOS_TRIM_POL = "FALLING";
+  defparam INST10.DCRST_ENA = "DISABLED";
+  defparam INST10.DDRST_ENA = "DISABLED";
+  defparam INST10.DPHASE_SOURCE = "DISABLED";
+  defparam INST10.FEEDBK_PATH = "CLKOP";
+  defparam INST10.FRACN_DIV = 0;
+  defparam INST10.FRACN_ENABLE = "DISABLED";
+  defparam INST10.INTFB_WAKE = "DISABLED";
+  defparam INST10.MRST_ENA = "DISABLED";
+  defparam INST10.OUTDIVIDER_MUXA2 = "DIVA";
+  defparam INST10.OUTDIVIDER_MUXB2 = "DIVB";
+  defparam INST10.OUTDIVIDER_MUXC2 = "DIVC";
+  defparam INST10.OUTDIVIDER_MUXD2 = "DIVD";
+  defparam INST10.PLLRST_ENA = "DISABLED";
+  defparam INST10.PLL_LOCK_MODE = 0;
+  defparam INST10.PLL_USE_WB = "DISABLED";
+  defparam INST10.PREDIVIDER_MUXA1 = 0;
+  defparam INST10.PREDIVIDER_MUXB1 = 0;
+  defparam INST10.PREDIVIDER_MUXC1 = 0;
+  defparam INST10.PREDIVIDER_MUXD1 = 0;
+  defparam INST10.STDBY_ENABLE = "DISABLED";
+  defparam INST10.VCO_BYPASS_A0 = "DISABLED";
+  defparam INST10.VCO_BYPASS_B0 = "DISABLED";
+  defparam INST10.VCO_BYPASS_C0 = "DISABLED";
+  defparam INST10.VCO_BYPASS_D0 = "DISABLED";
+endmodule

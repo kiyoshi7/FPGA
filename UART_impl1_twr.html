@@ -1,0 +1,1480 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file uart_impl1.ncd.
+Design name: Main
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-6900C
+Package:     CABGA256
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.3.144</big></U></B>
+Sun Mar 10 20:03:46 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o UART_impl1.twr -gui -msgset C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232/promote.xml UART_impl1.ncd UART_impl1.prf 
+Design file:     uart_impl1.ncd
+Preference file: uart_impl1.prf
+Device,speed:    LCMXO3L-6900C,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY NET "T_test_c" 10.230769 MHz (0 errors)</A></LI>            244 items scored, 0 timing errors detected.
+Report:   90.375MHz is the maximum frequency for this preference.
+
+<LI><A href='#par_twr_pref_0_1' Target='right'>FREQUENCY NET "CompClock/S_InternalClock" 133.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+1 potential circuit loop found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY NET "T_test_c" 10.230769 MHz ;
+            244 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 86.679ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/i369  (from CompUART/CompDataSelect/s_counter_2__N_84 +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_SM_Main_i0  (to T_test_c +)
+
+   Delay:               4.523ns  (39.0% logic, 61.0% route), 4 logic levels.
+
+ Constraint Details:
+
+      4.523ns physical path delay CompUART/CompDataSelect/SLICE_4 to CompUART/CompRS232/SLICE_12 meets
+     97.744ns delay constraint less
+      6.392ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 91.202ns) by 86.679ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_4 to CompUART/CompRS232/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R6C6B.CLK to       R6C6B.Q0 CompUART/CompDataSelect/SLICE_4 (from CompUART/CompDataSelect/s_counter_2__N_84)
+ROUTE         4     0.967       R6C6B.Q0 to       R5C5A.C1 CompUART/CompDataSelect/n433
+CTOF_DEL    ---     0.452       R5C5A.C1 to       R5C5A.F1 CompUART/SLICE_32
+ROUTE         5     0.918       R5C5A.F1 to       R6C5D.B1 n761
+CTOF_DEL    ---     0.452       R6C5D.B1 to       R6C5D.F1 CompUART/SLICE_30
+ROUTE         1     0.873       R6C5D.F1 to       R7C5B.A0 CompUART/n250
+CTOF_DEL    ---     0.452       R7C5B.A0 to       R7C5B.F0 CompUART/CompRS232/SLICE_12
+ROUTE         1     0.000       R7C5B.F0 to      R7C5B.DI0 CompUART/CompRS232/n251 (to T_test_c)
+                  --------
+                    4.523   (39.0% logic, 61.0% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5A.CLK T_test_c
+REG_DEL     ---     0.409      R7C5A.CLK to       R7C5A.Q0 CompUART/CompRS232/SLICE_25
+ROUTE         4     1.613       R7C5A.Q0 to      R6C6D.CLK CompUART/w_TX_DONE
+REG_DEL     ---     0.409      R6C6D.CLK to       R6C6D.Q0 CompUART/SLICE_33
+ROUTE         3     0.895       R6C6D.Q0 to       R5C6B.B1 CompUART/CompDataSelect/n438
+CTOF_DEL    ---     0.452       R5C6B.B1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.962       R5C6B.F1 to       R5C5A.D0 CompUART/CompDataSelect/n764
+CTOF_DEL    ---     0.452       R5C5A.D0 to       R5C5A.F0 CompUART/SLICE_32
+ROUTE         3     1.200       R5C5A.F0 to      R6C6B.CLK CompUART/CompDataSelect/s_counter_2__N_84
+                  --------
+                    8.103   (21.3% logic, 78.7% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path CompClock/Clock to CompUART/CompRS232/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5B.CLK T_test_c
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 86.906ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/i369  (from CompUART/CompDataSelect/s_counter_2__N_84 +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_TX_Data_i3  (to T_test_c +)
+                   FF                        CompUART/CompRS232/r_TX_Data_i2
+
+   Delay:               4.197ns  (31.3% logic, 68.7% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.197ns physical path delay CompUART/CompDataSelect/SLICE_4 to CompUART/SLICE_31 meets
+     97.744ns delay constraint less
+      6.392ns skew and
+      0.000ns feedback compensation and
+      0.249ns CE_SET requirement (totaling 91.103ns) by 86.906ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_4 to CompUART/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R6C6B.CLK to       R6C6B.Q0 CompUART/CompDataSelect/SLICE_4 (from CompUART/CompDataSelect/s_counter_2__N_84)
+ROUTE         4     0.967       R6C6B.Q0 to       R5C5A.C1 CompUART/CompDataSelect/n433
+CTOF_DEL    ---     0.452       R5C5A.C1 to       R5C5A.F1 CompUART/SLICE_32
+ROUTE         5     0.577       R5C5A.F1 to       R6C5C.D1 n761
+CTOF_DEL    ---     0.452       R6C5C.D1 to       R6C5C.F1 CompUART/SLICE_29
+ROUTE         4     1.340       R6C5C.F1 to       R5C6B.CE CompUART/T_test_c_enable_10 (to T_test_c)
+                  --------
+                    4.197   (31.3% logic, 68.7% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5A.CLK T_test_c
+REG_DEL     ---     0.409      R7C5A.CLK to       R7C5A.Q0 CompUART/CompRS232/SLICE_25
+ROUTE         4     1.613       R7C5A.Q0 to      R6C6D.CLK CompUART/w_TX_DONE
+REG_DEL     ---     0.409      R6C6D.CLK to       R6C6D.Q0 CompUART/SLICE_33
+ROUTE         3     0.895       R6C6D.Q0 to       R5C6B.B1 CompUART/CompDataSelect/n438
+CTOF_DEL    ---     0.452       R5C6B.B1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.962       R5C6B.F1 to       R5C5A.D0 CompUART/CompDataSelect/n764
+CTOF_DEL    ---     0.452       R5C5A.D0 to       R5C5A.F0 CompUART/SLICE_32
+ROUTE         3     1.200       R5C5A.F0 to      R6C6B.CLK CompUART/CompDataSelect/s_counter_2__N_84
+                  --------
+                    8.103   (21.3% logic, 78.7% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path CompClock/Clock to CompUART/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R5C6B.CLK T_test_c
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 87.285ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/i369  (from CompUART/CompDataSelect/s_counter_2__N_84 +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_TX_Data_i4  (to T_test_c +)
+
+   Delay:               3.818ns  (34.4% logic, 65.6% route), 3 logic levels.
+
+ Constraint Details:
+
+      3.818ns physical path delay CompUART/CompDataSelect/SLICE_4 to CompUART/CompRS232/SLICE_15 meets
+     97.744ns delay constraint less
+      6.392ns skew and
+      0.000ns feedback compensation and
+      0.249ns CE_SET requirement (totaling 91.103ns) by 87.285ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_4 to CompUART/CompRS232/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R6C6B.CLK to       R6C6B.Q0 CompUART/CompDataSelect/SLICE_4 (from CompUART/CompDataSelect/s_counter_2__N_84)
+ROUTE         4     0.967       R6C6B.Q0 to       R5C5A.C1 CompUART/CompDataSelect/n433
+CTOF_DEL    ---     0.452       R5C5A.C1 to       R5C5A.F1 CompUART/SLICE_32
+ROUTE         5     0.577       R5C5A.F1 to       R6C5C.D1 n761
+CTOF_DEL    ---     0.452       R6C5C.D1 to       R6C5C.F1 CompUART/SLICE_29
+ROUTE         4     0.961       R6C5C.F1 to       R6C6A.CE CompUART/T_test_c_enable_10 (to T_test_c)
+                  --------
+                    3.818   (34.4% logic, 65.6% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5A.CLK T_test_c
+REG_DEL     ---     0.409      R7C5A.CLK to       R7C5A.Q0 CompUART/CompRS232/SLICE_25
+ROUTE         4     1.613       R7C5A.Q0 to      R6C6D.CLK CompUART/w_TX_DONE
+REG_DEL     ---     0.409      R6C6D.CLK to       R6C6D.Q0 CompUART/SLICE_33
+ROUTE         3     0.895       R6C6D.Q0 to       R5C6B.B1 CompUART/CompDataSelect/n438
+CTOF_DEL    ---     0.452       R5C6B.B1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.962       R5C6B.F1 to       R5C5A.D0 CompUART/CompDataSelect/n764
+CTOF_DEL    ---     0.452       R5C5A.D0 to       R5C5A.F0 CompUART/SLICE_32
+ROUTE         3     1.200       R5C5A.F0 to      R6C6B.CLK CompUART/CompDataSelect/s_counter_2__N_84
+                  --------
+                    8.103   (21.3% logic, 78.7% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path CompClock/Clock to CompUART/CompRS232/SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R6C6A.CLK T_test_c
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 87.292ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/i369  (from CompUART/CompDataSelect/s_counter_2__N_84 +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_TX_Data_i1  (to T_test_c +)
+                   FF                        CompUART/CompRS232/r_TX_Data_i0
+
+   Delay:               3.811ns  (34.5% logic, 65.5% route), 3 logic levels.
+
+ Constraint Details:
+
+      3.811ns physical path delay CompUART/CompDataSelect/SLICE_4 to CompUART/SLICE_32 meets
+     97.744ns delay constraint less
+      6.392ns skew and
+      0.000ns feedback compensation and
+      0.249ns CE_SET requirement (totaling 91.103ns) by 87.292ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_4 to CompUART/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R6C6B.CLK to       R6C6B.Q0 CompUART/CompDataSelect/SLICE_4 (from CompUART/CompDataSelect/s_counter_2__N_84)
+ROUTE         4     0.967       R6C6B.Q0 to       R5C5A.C1 CompUART/CompDataSelect/n433
+CTOF_DEL    ---     0.452       R5C5A.C1 to       R5C5A.F1 CompUART/SLICE_32
+ROUTE         5     0.577       R5C5A.F1 to       R6C5C.D1 n761
+CTOF_DEL    ---     0.452       R6C5C.D1 to       R6C5C.F1 CompUART/SLICE_29
+ROUTE         4     0.954       R6C5C.F1 to       R5C5A.CE CompUART/T_test_c_enable_10 (to T_test_c)
+                  --------
+                    3.811   (34.5% logic, 65.5% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5A.CLK T_test_c
+REG_DEL     ---     0.409      R7C5A.CLK to       R7C5A.Q0 CompUART/CompRS232/SLICE_25
+ROUTE         4     1.613       R7C5A.Q0 to      R6C6D.CLK CompUART/w_TX_DONE
+REG_DEL     ---     0.409      R6C6D.CLK to       R6C6D.Q0 CompUART/SLICE_33
+ROUTE         3     0.895       R6C6D.Q0 to       R5C6B.B1 CompUART/CompDataSelect/n438
+CTOF_DEL    ---     0.452       R5C6B.B1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.962       R5C6B.F1 to       R5C5A.D0 CompUART/CompDataSelect/n764
+CTOF_DEL    ---     0.452       R5C5A.D0 to       R5C5A.F0 CompUART/SLICE_32
+ROUTE         3     1.200       R5C5A.F0 to      R6C6B.CLK CompUART/CompDataSelect/s_counter_2__N_84
+                  --------
+                    8.103   (21.3% logic, 78.7% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path CompClock/Clock to CompUART/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R5C5A.CLK T_test_c
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 87.661ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/i369  (from CompUART/CompDataSelect/s_counter_2__N_84 +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_TX_Data_i7  (to T_test_c +)
+                   FF                        CompUART/CompRS232/r_TX_Data_i5
+
+   Delay:               3.442ns  (38.1% logic, 61.9% route), 3 logic levels.
+
+ Constraint Details:
+
+      3.442ns physical path delay CompUART/CompDataSelect/SLICE_4 to CompUART/SLICE_30 meets
+     97.744ns delay constraint less
+      6.392ns skew and
+      0.000ns feedback compensation and
+      0.249ns CE_SET requirement (totaling 91.103ns) by 87.661ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_4 to CompUART/SLICE_30:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R6C6B.CLK to       R6C6B.Q0 CompUART/CompDataSelect/SLICE_4 (from CompUART/CompDataSelect/s_counter_2__N_84)
+ROUTE         4     0.967       R6C6B.Q0 to       R5C5A.C1 CompUART/CompDataSelect/n433
+CTOF_DEL    ---     0.452       R5C5A.C1 to       R5C5A.F1 CompUART/SLICE_32
+ROUTE         5     0.577       R5C5A.F1 to       R6C5C.D1 n761
+CTOF_DEL    ---     0.452       R6C5C.D1 to       R6C5C.F1 CompUART/SLICE_29
+ROUTE         4     0.585       R6C5C.F1 to       R6C5D.CE CompUART/T_test_c_enable_10 (to T_test_c)
+                  --------
+                    3.442   (38.1% logic, 61.9% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5A.CLK T_test_c
+REG_DEL     ---     0.409      R7C5A.CLK to       R7C5A.Q0 CompUART/CompRS232/SLICE_25
+ROUTE         4     1.613       R7C5A.Q0 to      R6C6D.CLK CompUART/w_TX_DONE
+REG_DEL     ---     0.409      R6C6D.CLK to       R6C6D.Q0 CompUART/SLICE_33
+ROUTE         3     0.895       R6C6D.Q0 to       R5C6B.B1 CompUART/CompDataSelect/n438
+CTOF_DEL    ---     0.452       R5C6B.B1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.962       R5C6B.F1 to       R5C5A.D0 CompUART/CompDataSelect/n764
+CTOF_DEL    ---     0.452       R5C5A.D0 to       R5C5A.F0 CompUART/SLICE_32
+ROUTE         3     1.200       R5C5A.F0 to      R6C6B.CLK CompUART/CompDataSelect/s_counter_2__N_84
+                  --------
+                    8.103   (21.3% logic, 78.7% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path CompClock/Clock to CompUART/SLICE_30:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R6C5D.CLK T_test_c
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 88.557ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/i369  (from CompUART/CompDataSelect/s_counter_2__N_84 +)
+   Destination:    FF         Data in        CompUART/CompDataSelect/s_data_i1  (to T_test_c +)
+                   FF                        CompUART/CompDataSelect/s_data_i5
+
+   Delay:               2.547ns  (33.8% logic, 66.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      2.547ns physical path delay CompUART/CompDataSelect/SLICE_4 to CompUART/CompDataSelect/SLICE_22 meets
+     97.744ns delay constraint less
+      6.392ns skew and
+      0.000ns feedback compensation and
+      0.248ns LSR_SET requirement (totaling 91.104ns) by 88.557ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_4 to CompUART/CompDataSelect/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R6C6B.CLK to       R6C6B.Q0 CompUART/CompDataSelect/SLICE_4 (from CompUART/CompDataSelect/s_counter_2__N_84)
+ROUTE         4     0.698       R6C6B.Q0 to       R5C6B.C1 CompUART/CompDataSelect/n433
+CTOF_DEL    ---     0.452       R5C6B.C1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.988       R5C6B.F1 to      R5C5C.LSR CompUART/CompDataSelect/n764 (to T_test_c)
+                  --------
+                    2.547   (33.8% logic, 66.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5A.CLK T_test_c
+REG_DEL     ---     0.409      R7C5A.CLK to       R7C5A.Q0 CompUART/CompRS232/SLICE_25
+ROUTE         4     1.613       R7C5A.Q0 to      R6C6D.CLK CompUART/w_TX_DONE
+REG_DEL     ---     0.409      R6C6D.CLK to       R6C6D.Q0 CompUART/SLICE_33
+ROUTE         3     0.895       R6C6D.Q0 to       R5C6B.B1 CompUART/CompDataSelect/n438
+CTOF_DEL    ---     0.452       R5C6B.B1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.962       R5C6B.F1 to       R5C5A.D0 CompUART/CompDataSelect/n764
+CTOF_DEL    ---     0.452       R5C5A.D0 to       R5C5A.F0 CompUART/SLICE_32
+ROUTE         3     1.200       R5C5A.F0 to      R6C6B.CLK CompUART/CompDataSelect/s_counter_2__N_84
+                  --------
+                    8.103   (21.3% logic, 78.7% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R5C5C.CLK T_test_c
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 88.557ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/i369  (from CompUART/CompDataSelect/s_counter_2__N_84 +)
+   Destination:    FF         Data in        CompUART/CompDataSelect/s_data_i2  (to T_test_c +)
+                   FF                        CompUART/CompDataSelect/s_data_i3
+
+   Delay:               2.547ns  (33.8% logic, 66.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      2.547ns physical path delay CompUART/CompDataSelect/SLICE_4 to CompUART/CompDataSelect/SLICE_20 meets
+     97.744ns delay constraint less
+      6.392ns skew and
+      0.000ns feedback compensation and
+      0.248ns LSR_SET requirement (totaling 91.104ns) by 88.557ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_4 to CompUART/CompDataSelect/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R6C6B.CLK to       R6C6B.Q0 CompUART/CompDataSelect/SLICE_4 (from CompUART/CompDataSelect/s_counter_2__N_84)
+ROUTE         4     0.698       R6C6B.Q0 to       R5C6B.C1 CompUART/CompDataSelect/n433
+CTOF_DEL    ---     0.452       R5C6B.C1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.988       R5C6B.F1 to      R5C5B.LSR CompUART/CompDataSelect/n764 (to T_test_c)
+                  --------
+                    2.547   (33.8% logic, 66.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5A.CLK T_test_c
+REG_DEL     ---     0.409      R7C5A.CLK to       R7C5A.Q0 CompUART/CompRS232/SLICE_25
+ROUTE         4     1.613       R7C5A.Q0 to      R6C6D.CLK CompUART/w_TX_DONE
+REG_DEL     ---     0.409      R6C6D.CLK to       R6C6D.Q0 CompUART/SLICE_33
+ROUTE         3     0.895       R6C6D.Q0 to       R5C6B.B1 CompUART/CompDataSelect/n438
+CTOF_DEL    ---     0.452       R5C6B.B1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.962       R5C6B.F1 to       R5C5A.D0 CompUART/CompDataSelect/n764
+CTOF_DEL    ---     0.452       R5C5A.D0 to       R5C5A.F0 CompUART/SLICE_32
+ROUTE         3     1.200       R5C5A.F0 to      R6C6B.CLK CompUART/CompDataSelect/s_counter_2__N_84
+                  --------
+                    8.103   (21.3% logic, 78.7% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R5C5B.CLK T_test_c
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 88.636ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/i369  (from CompUART/CompDataSelect/s_counter_2__N_84 +)
+   Destination:    FF         Data in        CompUART/CompDataSelect/s_data_i7  (to T_test_c +)
+
+   Delay:               2.413ns  (35.7% logic, 64.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      2.413ns physical path delay CompUART/CompDataSelect/SLICE_4 to SLICE_24 meets
+     97.744ns delay constraint less
+      6.392ns skew and
+      0.000ns feedback compensation and
+      0.303ns M_SET requirement (totaling 91.049ns) by 88.636ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_4 to SLICE_24:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R6C6B.CLK to       R6C6B.Q0 CompUART/CompDataSelect/SLICE_4 (from CompUART/CompDataSelect/s_counter_2__N_84)
+ROUTE         4     0.672       R6C6B.Q0 to       R6C6C.C0 CompUART/CompDataSelect/n433
+CTOF_DEL    ---     0.452       R6C6C.C0 to       R6C6C.F0 CompUART/CompDataSelect/SLICE_23
+ROUTE         2     0.880       R6C6C.F0 to       R7C6B.M0 CompUART/CompDataSelect/n595 (to T_test_c)
+                  --------
+                    2.413   (35.7% logic, 64.3% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5A.CLK T_test_c
+REG_DEL     ---     0.409      R7C5A.CLK to       R7C5A.Q0 CompUART/CompRS232/SLICE_25
+ROUTE         4     1.613       R7C5A.Q0 to      R6C6D.CLK CompUART/w_TX_DONE
+REG_DEL     ---     0.409      R6C6D.CLK to       R6C6D.Q0 CompUART/SLICE_33
+ROUTE         3     0.895       R6C6D.Q0 to       R5C6B.B1 CompUART/CompDataSelect/n438
+CTOF_DEL    ---     0.452       R5C6B.B1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.962       R5C6B.F1 to       R5C5A.D0 CompUART/CompDataSelect/n764
+CTOF_DEL    ---     0.452       R5C5A.D0 to       R5C5A.F0 CompUART/SLICE_32
+ROUTE         3     1.200       R5C5A.F0 to      R6C6B.CLK CompUART/CompDataSelect/s_counter_2__N_84
+                  --------
+                    8.103   (21.3% logic, 78.7% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path CompClock/Clock to SLICE_24:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C6B.CLK T_test_c
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 89.661ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/i369  (from CompUART/CompDataSelect/s_counter_2__N_84 +)
+   Destination:    FF         Data in        CompUART/CompDataSelect/s_data_i6  (to T_test_c +)
+
+   Delay:               1.541ns  (55.9% logic, 44.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.541ns physical path delay CompUART/CompDataSelect/SLICE_4 to CompUART/CompDataSelect/SLICE_23 meets
+     97.744ns delay constraint less
+      6.392ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 91.202ns) by 89.661ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_4 to CompUART/CompDataSelect/SLICE_23:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R6C6B.CLK to       R6C6B.Q0 CompUART/CompDataSelect/SLICE_4 (from CompUART/CompDataSelect/s_counter_2__N_84)
+ROUTE         4     0.672       R6C6B.Q0 to       R6C6C.C0 CompUART/CompDataSelect/n433
+CTOF_DEL    ---     0.452       R6C6C.C0 to       R6C6C.F0 CompUART/CompDataSelect/SLICE_23
+ROUTE         2     0.008       R6C6C.F0 to      R6C6C.DI0 CompUART/CompDataSelect/n595 (to T_test_c)
+                  --------
+                    1.541   (55.9% logic, 44.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5A.CLK T_test_c
+REG_DEL     ---     0.409      R7C5A.CLK to       R7C5A.Q0 CompUART/CompRS232/SLICE_25
+ROUTE         4     1.613       R7C5A.Q0 to      R6C6D.CLK CompUART/w_TX_DONE
+REG_DEL     ---     0.409      R6C6D.CLK to       R6C6D.Q0 CompUART/SLICE_33
+ROUTE         3     0.895       R6C6D.Q0 to       R5C6B.B1 CompUART/CompDataSelect/n438
+CTOF_DEL    ---     0.452       R5C6B.B1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.962       R5C6B.F1 to       R5C5A.D0 CompUART/CompDataSelect/n764
+CTOF_DEL    ---     0.452       R5C5A.D0 to       R5C5A.F0 CompUART/SLICE_32
+ROUTE         3     1.200       R5C5A.F0 to      R6C6B.CLK CompUART/CompDataSelect/s_counter_2__N_84
+                  --------
+                    8.103   (21.3% logic, 78.7% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_23:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R6C6C.CLK T_test_c
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 89.758ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/i369  (from CompUART/CompDataSelect/s_counter_2__N_84 +)
+   Destination:    FF         Data in        CompUART/CompDataSelect/s_data_i4  (to T_test_c +)
+
+   Delay:               1.444ns  (59.6% logic, 40.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.444ns physical path delay CompUART/CompDataSelect/SLICE_4 to CompUART/CompDataSelect/SLICE_21 meets
+     97.744ns delay constraint less
+      6.392ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 91.202ns) by 89.758ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_4 to CompUART/CompDataSelect/SLICE_21:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R6C6B.CLK to       R6C6B.Q0 CompUART/CompDataSelect/SLICE_4 (from CompUART/CompDataSelect/s_counter_2__N_84)
+ROUTE         4     0.583       R6C6B.Q0 to       R5C6A.D0 CompUART/CompDataSelect/n433
+CTOF_DEL    ---     0.452       R5C6A.D0 to       R5C6A.F0 CompUART/CompDataSelect/SLICE_21
+ROUTE         1     0.000       R5C6A.F0 to      R5C6A.DI0 CompUART/CompDataSelect/o_Data_7_N_73_3 (to T_test_c)
+                  --------
+                    1.444   (59.6% logic, 40.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R7C5A.CLK T_test_c
+REG_DEL     ---     0.409      R7C5A.CLK to       R7C5A.Q0 CompUART/CompRS232/SLICE_25
+ROUTE         4     1.613       R7C5A.Q0 to      R6C6D.CLK CompUART/w_TX_DONE
+REG_DEL     ---     0.409      R6C6D.CLK to       R6C6D.Q0 CompUART/SLICE_33
+ROUTE         3     0.895       R6C6D.Q0 to       R5C6B.B1 CompUART/CompDataSelect/n438
+CTOF_DEL    ---     0.452       R5C6B.B1 to       R5C6B.F1 CompUART/SLICE_31
+ROUTE         6     0.962       R5C6B.F1 to       R5C5A.D0 CompUART/CompDataSelect/n764
+CTOF_DEL    ---     0.452       R5C5A.D0 to       R5C5A.F0 CompUART/SLICE_32
+ROUTE         3     1.200       R5C5A.F0 to      R6C6B.CLK CompUART/CompDataSelect/s_counter_2__N_84
+                  --------
+                    8.103   (21.3% logic, 78.7% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path CompClock/Clock to CompUART/CompDataSelect/SLICE_21:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         1     0.000        OSC.OSC to      LPLL.CLKI CompClock/S_InternalClock
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.711     LPLL.CLKOP to      R5C6A.CLK T_test_c
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP CompClock/CompPll/PLLInst_0
+ROUTE        22     1.863     LPLL.CLKOP to     LPLL.CLKFB T_test_c
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+Report:   90.375MHz is the maximum frequency for this preference.
+
+
+================================================================================
+<A name="par_twr_pref_0_1"></A>Preference: FREQUENCY NET "CompClock/S_InternalClock" 133.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "T_test_c" 10.230769 MHz  |             |             |
+;                                       |   10.231 MHz|   90.375 MHz|   4  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"CompClock/S_InternalClock" 133.000000  |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 3 clocks:
+
+Clock Domain: CompClock/S_InternalClock   Source: CompClock/Clock.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: CompUART/w_TX_DONE   Source: CompUART/CompRS232/SLICE_25.Q0   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: T_test_c   Source: CompClock/CompPll/PLLInst_0.CLKOP   Loads: 22
+   Covered under: FREQUENCY NET "T_test_c" 10.230769 MHz ;
+
+   Data transfers from:
+   Clock Domain: CompUART/w_TX_DONE   Source: CompUART/CompRS232/SLICE_25.Q0
+      Covered under: FREQUENCY NET "T_test_c" 10.230769 MHz ;   Transfers: 1
+
+   Clock Domain: CompUART/w_TX_DONE   Source: CompUART/CompRS232/SLICE_25.Q0
+      Covered under: FREQUENCY NET "T_test_c" 10.230769 MHz ;   Transfers: 1
+
+   Clock Domain: CompUART/CompDataSelect/s_counter_2__N_84   Source: CompUART/SLICE_32.F0
+      Covered under: FREQUENCY NET "T_test_c" 10.230769 MHz ;   Transfers: 4
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 244 paths, 2 nets, and 203 connections (90.22% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.3.144</big></U></B>
+Sun Mar 10 20:03:47 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o UART_impl1.twr -gui -msgset C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232/promote.xml UART_impl1.ncd UART_impl1.prf 
+Design file:     uart_impl1.ncd
+Preference file: uart_impl1.prf
+Device,speed:    LCMXO3L-6900C,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "T_test_c" 10.230769 MHz (0 errors)</A></LI>            244 items scored, 0 timing errors detected.
+
+<LI><A href='#par_twr_pref_1_1' Target='right'>FREQUENCY NET "CompClock/S_InternalClock" 133.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+1 potential circuit loop found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY NET "T_test_c" 10.230769 MHz ;
+            244 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/s_data_i2  (from T_test_c +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_TX_Data_i1  (to T_test_c +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay CompUART/CompDataSelect/SLICE_20 to CompUART/SLICE_32 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_20 to CompUART/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R5C5B.CLK to       R5C5B.Q1 CompUART/CompDataSelect/SLICE_20 (from T_test_c)
+ROUTE         1     0.152       R5C5B.Q1 to       R5C5A.M1 CompUART/r_TX_BYTE_1 (to T_test_c)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompDataSelect/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R5C5B.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CompClock/CompPll/PLLInst_0 to CompUART/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R5C5A.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/s_data_i1  (from T_test_c +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_TX_Data_i0  (to T_test_c +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay CompUART/CompDataSelect/SLICE_22 to CompUART/SLICE_32 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_22 to CompUART/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R5C5C.CLK to       R5C5C.Q1 CompUART/CompDataSelect/SLICE_22 (from T_test_c)
+ROUTE         1     0.152       R5C5C.Q1 to       R5C5A.M0 CompUART/r_TX_BYTE_0 (to T_test_c)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompDataSelect/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R5C5C.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CompClock/CompPll/PLLInst_0 to CompUART/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R5C5A.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/s_data_i4  (from T_test_c +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_TX_Data_i3  (to T_test_c +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay CompUART/CompDataSelect/SLICE_21 to CompUART/SLICE_31 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_21 to CompUART/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R5C6A.CLK to       R5C6A.Q0 CompUART/CompDataSelect/SLICE_21 (from T_test_c)
+ROUTE         1     0.152       R5C6A.Q0 to       R5C6B.M1 CompUART/r_TX_BYTE_3 (to T_test_c)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompDataSelect/SLICE_21:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R5C6A.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CompClock/CompPll/PLLInst_0 to CompUART/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R5C6B.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompDataSelect/s_data_i3  (from T_test_c +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_TX_Data_i2  (to T_test_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay CompUART/CompDataSelect/SLICE_20 to CompUART/SLICE_31 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompDataSelect/SLICE_20 to CompUART/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R5C5B.CLK to       R5C5B.Q0 CompUART/CompDataSelect/SLICE_20 (from T_test_c)
+ROUTE         1     0.154       R5C5B.Q0 to       R5C6B.M0 CompUART/r_TX_BYTE_2 (to T_test_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompDataSelect/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R5C5B.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CompClock/CompPll/PLLInst_0 to CompUART/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R5C6B.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.344ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompRS232/r_SM_Main_i2  (from T_test_c +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_SM_Main_i1  (to T_test_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay CompUART/CompRS232/SLICE_18 to CompUART/CompRS232/SLICE_17 meets
+     -0.057ns LSR_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.057ns) by 0.344ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompRS232/SLICE_18 to CompUART/CompRS232/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C6D.CLK to       R7C6D.Q0 CompUART/CompRS232/SLICE_18 (from T_test_c)
+ROUTE        15     0.154       R7C6D.Q0 to      R7C6C.LSR CompUART/r_SM_Main_2 (to T_test_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_18:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R7C6D.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R7C6C.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.377ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompRS232/r_Clk_Count_99__i0  (from T_test_c +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_Clk_Count_99__i0  (to T_test_c +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay CompUART/CompRS232/SLICE_3 to CompUART/CompRS232/SLICE_3 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompRS232/SLICE_3 to CompUART/CompRS232/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C6A.CLK to       R8C6A.Q1 CompUART/CompRS232/SLICE_3 (from T_test_c)
+ROUTE         1     0.130       R8C6A.Q1 to       R8C6A.A1 CompUART/CompRS232/n7_adj_90
+CTOF_DEL    ---     0.101       R8C6A.A1 to       R8C6A.F1 CompUART/CompRS232/SLICE_3
+ROUTE         1     0.000       R8C6A.F1 to      R8C6A.DI1 CompUART/CompRS232/n40 (to T_test_c)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R8C6A.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R8C6A.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompRS232/r_Clk_Count_99__i5  (from T_test_c +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_Clk_Count_99__i5  (to T_test_c +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay CompUART/CompRS232/SLICE_1 to CompUART/CompRS232/SLICE_1 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompRS232/SLICE_1 to CompUART/CompRS232/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C6D.CLK to       R8C6D.Q0 CompUART/CompRS232/SLICE_1 (from T_test_c)
+ROUTE         2     0.132       R8C6D.Q0 to       R8C6D.A0 CompUART/CompRS232/r_Clk_Count_5
+CTOF_DEL    ---     0.101       R8C6D.A0 to       R8C6D.F0 CompUART/CompRS232/SLICE_1
+ROUTE         1     0.000       R8C6D.F0 to      R8C6D.DI0 CompUART/CompRS232/n35 (to T_test_c)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R8C6D.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R8C6D.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompRS232/r_Clk_Count_99__i2  (from T_test_c +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_Clk_Count_99__i2  (to T_test_c +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay CompUART/CompRS232/SLICE_0 to CompUART/CompRS232/SLICE_0 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompRS232/SLICE_0 to CompUART/CompRS232/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C6B.CLK to       R8C6B.Q1 CompUART/CompRS232/SLICE_0 (from T_test_c)
+ROUTE         2     0.132       R8C6B.Q1 to       R8C6B.A1 CompUART/CompRS232/r_Clk_Count_2
+CTOF_DEL    ---     0.101       R8C6B.A1 to       R8C6B.F1 CompUART/CompRS232/SLICE_0
+ROUTE         1     0.000       R8C6B.F1 to      R8C6B.DI1 CompUART/CompRS232/n38 (to T_test_c)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R8C6B.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R8C6B.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompRS232/r_Bit_Index_i2  (from T_test_c +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_Bit_Index_i2  (to T_test_c +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay CompUART/CompRS232/SLICE_11 to CompUART/CompRS232/SLICE_11 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompRS232/SLICE_11 to CompUART/CompRS232/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C5D.CLK to       R7C5D.Q0 CompUART/CompRS232/SLICE_11 (from T_test_c)
+ROUTE         5     0.132       R7C5D.Q0 to       R7C5D.A0 CompUART/CompRS232/r_Bit_Index_2
+CTOF_DEL    ---     0.101       R7C5D.A0 to       R7C5D.F0 CompUART/CompRS232/SLICE_11
+ROUTE         1     0.000       R7C5D.F0 to      R7C5D.DI0 CompUART/CompRS232/r_Bit_Index_2_N_26_2 (to T_test_c)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R7C5D.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R7C5D.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CompUART/CompRS232/r_Clk_Count_99__i3  (from T_test_c +)
+   Destination:    FF         Data in        CompUART/CompRS232/r_Clk_Count_99__i3  (to T_test_c +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay CompUART/CompRS232/SLICE_2 to CompUART/CompRS232/SLICE_2 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path CompUART/CompRS232/SLICE_2 to CompUART/CompRS232/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C6C.CLK to       R8C6C.Q0 CompUART/CompRS232/SLICE_2 (from T_test_c)
+ROUTE         2     0.132       R8C6C.Q0 to       R8C6C.A0 CompUART/CompRS232/r_Clk_Count_3
+CTOF_DEL    ---     0.101       R8C6C.A0 to       R8C6C.F0 CompUART/CompRS232/SLICE_2
+ROUTE         1     0.000       R8C6C.F0 to      R8C6C.DI0 CompUART/CompRS232/n37 (to T_test_c)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R8C6C.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CompClock/CompPll/PLLInst_0 to CompUART/CompRS232/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        22     0.698     LPLL.CLKOP to      R8C6C.CLK T_test_c
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+<A name="par_twr_pref_1_1"></A>Preference: FREQUENCY NET "CompClock/S_InternalClock" 133.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "T_test_c" 10.230769 MHz  |             |             |
+;                                       |     0.000 ns|     0.304 ns|   1  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"CompClock/S_InternalClock" 133.000000  |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 3 clocks:
+
+Clock Domain: CompUART/w_TX_DONE   Source: CompUART/CompRS232/SLICE_25.Q0   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: CompClock/S_InternalClock   Source: CompClock/Clock.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: T_test_c   Source: CompClock/CompPll/PLLInst_0.CLKOP   Loads: 22
+   Covered under: FREQUENCY NET "T_test_c" 10.230769 MHz ;
+
+   Data transfers from:
+   Clock Domain: CompUART/w_TX_DONE   Source: CompUART/CompRS232/SLICE_25.Q0
+      Covered under: FREQUENCY NET "T_test_c" 10.230769 MHz ;   Transfers: 1
+
+   Clock Domain: CompUART/w_TX_DONE   Source: CompUART/CompRS232/SLICE_25.Q0
+      Covered under: FREQUENCY NET "T_test_c" 10.230769 MHz ;   Transfers: 1
+
+   Clock Domain: CompUART/CompDataSelect/s_counter_2__N_84   Source: CompUART/SLICE_32.F0
+      Covered under: FREQUENCY NET "T_test_c" 10.230769 MHz ;   Transfers: 4
+
+
+<A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 244 paths, 2 nets, and 203 connections (90.22% coverage)
+
+
+
+<A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

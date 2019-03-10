@@ -1,0 +1,718 @@
+
+map -a "MachXO3L" -p LCMXO3L-6900C -t CABGA256 -s 5 -oc Commercial   "UART_impl1.ngd" -o "UART_impl1_map.ncd" -pr "UART_impl1.prf" -mp "UART_impl1.mrp" -lpf "C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232/impl1/UART_impl1.lpf" -lpf "C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232/UART.lpf" -c 0            
+map:  version Diamond (64-bit) 3.10.3.144
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: UART_impl1.ngd
+   Picdevice="LCMXO3L-6900C"
+
+   Pictype="CABGA256"
+
+   Picspeed=5
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO3L-6900CCABGA256, Performance used: 5.
+
+Loading device for application map from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+    <postMsg mid="52101259" type="Warning" dynamic="1" navigation="0" arg0="CompUART/CompDataSelect/s_counter_2__N_84_I_0_set"  />
+
+
+
+Design Summary:
+   Number of registers:     36 out of  7485 (0%)
+      PFU registers:           36 out of  6864 (1%)
+      PIO registers:            0 out of   621 (0%)
+   Number of SLICEs:        28 out of  3432 (1%)
+      SLICEs as Logic/ROM:     28 out of  3432 (1%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:          4 out of  3432 (0%)
+   Number of LUT4s:         47 out of  6864 (1%)
+      Number used as logic LUTs:         39
+      Number used as distributed RAM:     0
+      Number used as ripple logic:        8
+      Number used as shift registers:     0
+   Number of PIO sites used: 2 + 4(JTAG) out of 207 (3%)
+   Number of block RAMs:  0 out of 26 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  Yes
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  4
+     Net T_test_c: 21 loads, 21 rising, 0 falling (Driver: CompClock/CompPll/PLLInst_0 )
+     Net CompUART/w_TX_DONE: 4 loads, 4 rising, 0 falling (Driver: CompUART/CompRS232/r_TX_Done_44 )
+     Net CompUART/CompDataSelect/s_counter_2__N_84: 1 loads, 1 rising, 0 falling (Driver: CompUART/CompDataSelect/i649_2_lut_4_lut )
+     Net CompClock/S_InternalClock: 1 loads, 1 rising, 0 falling (Driver: CompClock/Clock )
+   Number of Clock Enables:  4
+     Net CompUART/T_test_c_enable_10: 4 loads, 4 LSLICEs
+     Net CompUART/CompRS232/T_test_c_enable_12: 2 loads, 2 LSLICEs
+     Net CompUART/CompRS232/T_test_c_enable_4: 1 loads, 1 LSLICEs
+     Net CompUART/CompRS232/T_test_c_enable_19: 5 loads, 5 LSLICEs
+   Number of LSRs:  9
+     Net CompUART/r_SM_Main_2: 2 loads, 2 LSLICEs
+     Net CompUART/CompRS232/n453: 3 loads, 3 LSLICEs
+     Net CompUART/CompRS232/n658: 1 loads, 1 LSLICEs
+     Net CompUART/CompRS232/n445: 4 loads, 4 LSLICEs
+     Net CompUART/CompDataSelect/s_counter_0: 2 loads, 2 LSLICEs
+     Net CompUART/CompDataSelect/n764: 2 loads, 2 LSLICEs
+     Net CompUART/CompDataSelect/n760: 1 loads, 1 LSLICEs
+     Net CompUART/CompDataSelect/s_counter_2__N_88: 1 loads, 1 LSLICEs
+     Net CompUART/CompDataSelect/s_counter_2__N_84: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net CompUART/r_SM_Main_2: 15 loads
+     Net CompUART/r_SM_Main_1: 14 loads
+     Net CompUART/CompRS232/r_SM_Main_0: 11 loads
+     Net CompUART/CompDataSelect/s_counter_0: 9 loads
+     Net CompUART/CompRS232/r_SM_Main_2_N_61_1: 8 loads
+     Net CompUART/CompDataSelect/s_counter_1: 7 loads
+     Net CompUART/CompRS232/r_Bit_Index_0: 7 loads
+     Net CompUART/CompDataSelect/n764: 6 loads
+     Net CompUART/CompRS232/r_Bit_Index_2: 5 loads
+     Net CompUART/CompRS232/T_test_c_enable_19: 5 loads
+ 
+
+   Number of warnings:  1
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 57 MB
+
+Dumping design to file UART_impl1_map.ncd.
+
+ncd2vdb "UART_impl1_map.ncd" ".vdbs/UART_impl1_map.vdb"
+
+Loading device for application ncd2vdb from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+
+trce -f "UART_impl1.mt" -o "UART_impl1.tw1" "UART_impl1_map.ncd" "UART_impl1.prf"
+trce:  version Diamond (64-bit) 3.10.3.144
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file uart_impl1_map.ncd.
+Design name: Main
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-6900C
+Package:     CABGA256
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.3.144
+Sun Mar 10 20:03:36 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o UART_impl1.tw1 -gui -msgset C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232/promote.xml UART_impl1_map.ncd UART_impl1.prf 
+Design file:     uart_impl1_map.ncd
+Preference file: uart_impl1.prf
+Device,speed:    LCMXO3L-6900C,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+1 potential circuit loop found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 244 paths, 2 nets, and 203 connections (90.22% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.3.144
+Sun Mar 10 20:03:36 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o UART_impl1.tw1 -gui -msgset C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232/promote.xml UART_impl1_map.ncd UART_impl1.prf 
+Design file:     uart_impl1_map.ncd
+Preference file: uart_impl1.prf
+Device,speed:    LCMXO3L-6900C,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+1 potential circuit loop found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 244 paths, 2 nets, and 203 connections (90.22% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total time: 0 secs 
+
+mpartrce -p "UART_impl1.p2t" -f "UART_impl1.p3t" -tf "UART_impl1.pt" "UART_impl1_map.ncd" "UART_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "UART_impl1_map.ncd"
+Sun Mar 10 20:03:37 2019
+
+PAR: Place And Route Diamond (64-bit) 3.10.3.144.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF UART_impl1_map.ncd UART_impl1.dir/5_1.ncd UART_impl1.prf
+Preference file: UART_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file UART_impl1_map.ncd.
+Design name: Main
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-6900C
+Package:     CABGA256
+Performance: 5
+Loading device for application par from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)    2+4(JTAG)/336     2% used
+                   2+4(JTAG)/207     3% bonded
+
+   SLICE             28/3432         <1% used
+
+   GSR                1/1           100% used
+   OSC                1/1           100% used
+   PLL                1/2            50% used
+
+
+1 potential circuit loop found in timing analysis.
+Number of Signals: 86
+Number of Connections: 225
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   2 out of 2 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    T_test_c (driver: CompClock/CompPll/PLLInst_0, clk load #: 20)
+
+
+No signal is selected as secondary clock.
+
+Signal n761 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+...................
+Placer score = 6622.
+Finished Placer Phase 1.  REAL time: 5 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  6573
+Finished Placer Phase 2.  REAL time: 5 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  PLL        : 1 out of 2 (50%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Quadrants All (TL, TR, BL, BR) - Global Clocks:
+  PRIMARY "T_test_c" from CLKOP on comp "CompClock/CompPll/PLLInst_0" on PLL site "LPLL", clk load = 20
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 0 out of 8 (0%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   2 + 4(JTAG) out of 336 (1.8%) PIO sites used.
+   2 + 4(JTAG) out of 207 (2.9%) bonded PIO sites used.
+   Number of PIO comps: 2; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 51 (  0%) | -          | -         |
+| 1        | 2 / 52 (  3%) | 2.5V       | -         |
+| 2        | 0 / 52 (  0%) | -          | -         |
+| 3        | 0 / 16 (  0%) | -          | -         |
+| 4        | 0 / 16 (  0%) | -          | -         |
+| 5        | 0 / 20 (  0%) | -          | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 5 secs 
+
+Dumping design to file UART_impl1.dir/5_1.ncd.
+
+1 potential circuit loop found in timing analysis.
+0 connections routed; 225 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=CompUART/w_TX_DONE loads=4 clock_loads=4&#xA;   Signal=CompUART/CompDataSelect/s_counter_2__N_84 loads=3 clock_loads=1&#xA;   Signal=CompClock/S_InternalClock loads=1 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 7 secs 
+
+Start NBR router at 20:03:44 03/10/19
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+1 potential circuit loop found in timing analysis.
+Start NBR special constraint process at 20:03:44 03/10/19
+
+Start NBR section for initial routing at 20:03:44 03/10/19
+Level 4, iteration 1
+11(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 90.805ns/0.000ns; real time: 7 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 20:03:44 03/10/19
+Level 4, iteration 1
+6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.897ns/0.000ns; real time: 7 secs 
+Level 4, iteration 2
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.897ns/0.000ns; real time: 7 secs 
+Level 4, iteration 3
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.897ns/0.000ns; real time: 7 secs 
+Level 4, iteration 4
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.897ns/0.000ns; real time: 7 secs 
+Level 4, iteration 5
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.897ns/0.000ns; real time: 7 secs 
+Level 4, iteration 6
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.897ns/0.000ns; real time: 7 secs 
+Level 4, iteration 7
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.897ns/0.000ns; real time: 7 secs 
+Level 4, iteration 8
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.897ns/0.000ns; real time: 7 secs 
+Level 4, iteration 9
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.897ns/0.000ns; real time: 7 secs 
+Level 4, iteration 10
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.897ns/0.000ns; real time: 7 secs 
+Level 4, iteration 11
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.956ns/0.000ns; real time: 8 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.956ns/0.000ns; real time: 8 secs 
+Level 4, iteration 13
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.679ns/0.000ns; real time: 8 secs 
+Level 4, iteration 14
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.679ns/0.000ns; real time: 8 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 20:03:45 03/10/19
+1 potential circuit loop found in timing analysis.
+1 potential circuit loop found in timing analysis.
+
+Start NBR section for re-routing at 20:03:45 03/10/19
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 86.679ns/0.000ns; real time: 8 secs 
+
+Start NBR section for post-routing at 20:03:45 03/10/19
+1 potential circuit loop found in timing analysis.
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 86.679ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=CompUART/w_TX_DONE loads=4 clock_loads=4&#xA;   Signal=CompUART/CompDataSelect/s_counter_2__N_84 loads=3 clock_loads=1&#xA;   Signal=CompClock/S_InternalClock loads=1 clock_loads=1"  />
+
+1 potential circuit loop found in timing analysis.
+1 potential circuit loop found in timing analysis.
+1 potential circuit loop found in timing analysis.
+Total CPU time 8 secs 
+Total REAL time: 8 secs 
+Completely routed.
+End of route.  225 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file UART_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Success
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 86.679
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.304
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 8 secs 
+Total REAL time to completion: 8 secs 
+
+par done!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "UART_impl1.pt" -o "UART_impl1.twr" "UART_impl1.ncd" "UART_impl1.prf"
+trce:  version Diamond (64-bit) 3.10.3.144
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file uart_impl1.ncd.
+Design name: Main
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-6900C
+Package:     CABGA256
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.3.144
+Sun Mar 10 20:03:46 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o UART_impl1.twr -gui -msgset C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232/promote.xml UART_impl1.ncd UART_impl1.prf 
+Design file:     uart_impl1.ncd
+Preference file: uart_impl1.prf
+Device,speed:    LCMXO3L-6900C,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+1 potential circuit loop found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 244 paths, 2 nets, and 203 connections (90.22% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.3.144
+Sun Mar 10 20:03:47 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o UART_impl1.twr -gui -msgset C:/Users/Daniel/Desktop/Projects/FPGA/Lattice/RS232/promote.xml UART_impl1.ncd UART_impl1.prf 
+Design file:     uart_impl1.ncd
+Preference file: uart_impl1.prf
+Device,speed:    LCMXO3L-6900C,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+1 potential circuit loop found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 244 paths, 2 nets, and 203 connections (90.22% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total time: 0 secs 
+
+iotiming  "UART_impl1.ncd" "UART_impl1.prf"
+I/O Timing Report:
+:  version Diamond (64-bit) 3.10.3.144
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application iotiming from file uart_impl1.ncd.
+Design name: Main
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-6900C
+Package:     CABGA256
+Performance: 5
+Loading device for application iotiming from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+1 potential circuit loop found in timing analysis.
+Running Performance Grade: 5
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+1 potential circuit loop found in timing analysis.
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file uart_impl1.ncd.
+Design name: Main
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-6900C
+Package:     CABGA256
+Performance: 6
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+1 potential circuit loop found in timing analysis.
+Running Performance Grade: 6
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+1 potential circuit loop found in timing analysis.
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file uart_impl1.ncd.
+Design name: Main
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-6900C
+Package:     CABGA256
+Performance: M
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+1 potential circuit loop found in timing analysis.
+Running Performance Grade: M
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+1 potential circuit loop found in timing analysis.
+Computing Min Clock to Output Delay ...
+Done.
+
+bitgen -f "UART_impl1.t2b" -w "UART_impl1.ncd" "UART_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.10.3.144
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file UART_impl1.ncd.
+Design name: Main
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-6900C
+Package:     CABGA256
+Performance: 5
+Loading device for application Bitgen from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from UART_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 DUALBOOTGOLDEN  |                     INTERNAL**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.94.
+ 
+Saving bit stream in "UART_impl1.bit".

@@ -1,0 +1,547 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<STYLE type=text/css>
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 9pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 9pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY><B>
+</B>
+<BR><PRE><A name="Report Header"></A>
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.3.144
+Sun Mar 03 16:02:14 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design file:     Main
+Device,speed:    LCMXO3L-6900C,M
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+
+</A><A name="FREQUENCY NET 'S_UARTClock' 10.230769 MH"></A>================================================================================
+Preference: FREQUENCY NET "S_UARTClock" 10.230769 MHz ;
+            10 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.304ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CompDataSelect/SLICE_19">CompDataSelect/s_data_i0</A>  (from <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_28">CompRS232/r_TX_Data_i0</A>  (to <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay CompDataSelect/SLICE_19 to SLICE_28 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:REG_DEL, 0.133,R9C2A.CLK,R9C2A.Q0,CompDataSelect/SLICE_19:ROUTE, 0.152,R9C2A.Q0,R9C2D.M0,r_TX_BYTE_0">Data path</A> CompDataSelect/SLICE_19 to SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R9C2A.CLK to       R9C2A.Q0 <A href="#@comp:CompDataSelect/SLICE_19">CompDataSelect/SLICE_19</A> (from <A href="#@net:S_UARTClock">S_UARTClock</A>)
+ROUTE         1     0.152<A href="#@net:r_TX_BYTE_0:R9C2A.Q0:R9C2D.M0:0.152">       R9C2A.Q0 to R9C2D.M0      </A> <A href="#@net:r_TX_BYTE_0">r_TX_BYTE_0</A> (to <A href="#@net:S_UARTClock">S_UARTClock</A>)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.697,LPLL.CLKOP,R9C2A.CLK,S_UARTClock">Source Clock Path</A> CompClock/CompPll/PLLInst_0 to CompDataSelect/SLICE_19:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.697<A href="#@net:S_UARTClock:LPLL.CLKOP:R9C2A.CLK:0.697">     LPLL.CLKOP to R9C2A.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.697   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.697,LPLL.CLKOP,R9C2D.CLK,S_UARTClock">Destination Clock Path</A> CompClock/CompPll/PLLInst_0 to SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.697<A href="#@net:S_UARTClock:LPLL.CLKOP:R9C2D.CLK:0.697">     LPLL.CLKOP to R9C2D.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.697   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.304ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CompDataSelect/SLICE_19">CompDataSelect/s_data_i1</A>  (from <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_28">CompRS232/r_TX_Data_i1</A>  (to <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay CompDataSelect/SLICE_19 to SLICE_28 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:REG_DEL, 0.133,R9C2A.CLK,R9C2A.Q1,CompDataSelect/SLICE_19:ROUTE, 0.152,R9C2A.Q1,R9C2D.M1,r_TX_BYTE_1">Data path</A> CompDataSelect/SLICE_19 to SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R9C2A.CLK to       R9C2A.Q1 <A href="#@comp:CompDataSelect/SLICE_19">CompDataSelect/SLICE_19</A> (from <A href="#@net:S_UARTClock">S_UARTClock</A>)
+ROUTE         1     0.152<A href="#@net:r_TX_BYTE_1:R9C2A.Q1:R9C2D.M1:0.152">       R9C2A.Q1 to R9C2D.M1      </A> <A href="#@net:r_TX_BYTE_1">r_TX_BYTE_1</A> (to <A href="#@net:S_UARTClock">S_UARTClock</A>)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.697,LPLL.CLKOP,R9C2A.CLK,S_UARTClock">Source Clock Path</A> CompClock/CompPll/PLLInst_0 to CompDataSelect/SLICE_19:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.697<A href="#@net:S_UARTClock:LPLL.CLKOP:R9C2A.CLK:0.697">     LPLL.CLKOP to R9C2A.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.697   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.697,LPLL.CLKOP,R9C2D.CLK,S_UARTClock">Destination Clock Path</A> CompClock/CompPll/PLLInst_0 to SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.697<A href="#@net:S_UARTClock:LPLL.CLKOP:R9C2D.CLK:0.697">     LPLL.CLKOP to R9C2D.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.697   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.304ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CompDataSelect/SLICE_20">CompDataSelect/s_data_i2</A>  (from <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_26">CompRS232/r_TX_Data_i2</A>  (to <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay CompDataSelect/SLICE_20 to SLICE_26 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:REG_DEL, 0.133,R8C2C.CLK,R8C2C.Q0,CompDataSelect/SLICE_20:ROUTE, 0.152,R8C2C.Q0,R8C2A.M0,r_TX_BYTE_2">Data path</A> CompDataSelect/SLICE_20 to SLICE_26:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C2C.CLK to       R8C2C.Q0 <A href="#@comp:CompDataSelect/SLICE_20">CompDataSelect/SLICE_20</A> (from <A href="#@net:S_UARTClock">S_UARTClock</A>)
+ROUTE         1     0.152<A href="#@net:r_TX_BYTE_2:R8C2C.Q0:R8C2A.M0:0.152">       R8C2C.Q0 to R8C2A.M0      </A> <A href="#@net:r_TX_BYTE_2">r_TX_BYTE_2</A> (to <A href="#@net:S_UARTClock">S_UARTClock</A>)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.697,LPLL.CLKOP,R8C2C.CLK,S_UARTClock">Source Clock Path</A> CompClock/CompPll/PLLInst_0 to CompDataSelect/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.697<A href="#@net:S_UARTClock:LPLL.CLKOP:R8C2C.CLK:0.697">     LPLL.CLKOP to R8C2C.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.697   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.697,LPLL.CLKOP,R8C2A.CLK,S_UARTClock">Destination Clock Path</A> CompClock/CompPll/PLLInst_0 to SLICE_26:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.697<A href="#@net:S_UARTClock:LPLL.CLKOP:R8C2A.CLK:0.697">     LPLL.CLKOP to R8C2A.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.697   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.304ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CompDataSelect/SLICE_20">CompDataSelect/s_data_i3</A>  (from <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_26">CompRS232/r_TX_Data_i3</A>  (to <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay CompDataSelect/SLICE_20 to SLICE_26 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:REG_DEL, 0.133,R8C2C.CLK,R8C2C.Q1,CompDataSelect/SLICE_20:ROUTE, 0.152,R8C2C.Q1,R8C2A.M1,r_TX_BYTE_3">Data path</A> CompDataSelect/SLICE_20 to SLICE_26:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R8C2C.CLK to       R8C2C.Q1 <A href="#@comp:CompDataSelect/SLICE_20">CompDataSelect/SLICE_20</A> (from <A href="#@net:S_UARTClock">S_UARTClock</A>)
+ROUTE         1     0.152<A href="#@net:r_TX_BYTE_3:R8C2C.Q1:R8C2A.M1:0.152">       R8C2C.Q1 to R8C2A.M1      </A> <A href="#@net:r_TX_BYTE_3">r_TX_BYTE_3</A> (to <A href="#@net:S_UARTClock">S_UARTClock</A>)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.697,LPLL.CLKOP,R8C2C.CLK,S_UARTClock">Source Clock Path</A> CompClock/CompPll/PLLInst_0 to CompDataSelect/SLICE_20:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.697<A href="#@net:S_UARTClock:LPLL.CLKOP:R8C2C.CLK:0.697">     LPLL.CLKOP to R8C2C.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.697   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.697,LPLL.CLKOP,R8C2A.CLK,S_UARTClock">Destination Clock Path</A> CompClock/CompPll/PLLInst_0 to SLICE_26:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.697<A href="#@net:S_UARTClock:LPLL.CLKOP:R8C2A.CLK:0.697">     LPLL.CLKOP to R8C2A.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.697   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.336ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CompRS232/SLICE_12">CompRS232/r_SM_Main_i2</A>  (from <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+   Destination:    FF         Data in        <A href="#@comp:CompRS232/SLICE_11">CompRS232/r_SM_Main_i1</A>  (to <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+                   FF                        <A href="#@net:CompRS232/r_SM_Main_i0">CompRS232/r_SM_Main_i0</A>
+
+   Delay:               0.279ns  (47.7% logic, 52.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.279ns physical path delay CompRS232/SLICE_12 to CompRS232/SLICE_11 meets
+     -0.057ns LSR_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.057ns) by 0.336ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:REG_DEL, 0.133,R7C3A.CLK,R7C3A.Q0,CompRS232/SLICE_12:ROUTE, 0.146,R7C3A.Q0,R7C3B.LSR,CompRS232/r_SM_Main_2">Data path</A> CompRS232/SLICE_12 to CompRS232/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C3A.CLK to       R7C3A.Q0 <A href="#@comp:CompRS232/SLICE_12">CompRS232/SLICE_12</A> (from <A href="#@net:S_UARTClock">S_UARTClock</A>)
+ROUTE        13     0.146<A href="#@net:CompRS232/r_SM_Main_2:R7C3A.Q0:R7C3B.LSR:0.146">       R7C3A.Q0 to R7C3B.LSR     </A> <A href="#@net:CompRS232/r_SM_Main_2">CompRS232/r_SM_Main_2</A> (to <A href="#@net:S_UARTClock">S_UARTClock</A>)
+                  --------
+                    0.279   (47.7% logic, 52.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C3A.CLK,S_UARTClock">Source Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C3A.CLK:0.698">     LPLL.CLKOP to R7C3A.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C3B.CLK,S_UARTClock">Destination Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C3B.CLK:0.698">     LPLL.CLKOP to R7C3B.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.377ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CompRS232/SLICE_2">CompRS232/r_Clk_Count_89__i0</A>  (from <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+   Destination:    FF         Data in        <A href="#@comp:CompRS232/SLICE_2">CompRS232/r_Clk_Count_89__i0</A>  (to <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+
+   Delay:               0.364ns  (64.3% logic, 35.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.364ns physical path delay CompRS232/SLICE_2 to CompRS232/SLICE_2 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.377ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:REG_DEL, 0.133,R7C4A.CLK,R7C4A.Q1,CompRS232/SLICE_2:ROUTE, 0.130,R7C4A.Q1,R7C4A.A1,CompRS232/n7:CTOF_DEL, 0.101,R7C4A.A1,R7C4A.F1,CompRS232/SLICE_2:ROUTE, 0.000,R7C4A.F1,R7C4A.DI1,CompRS232/n40">Data path</A> CompRS232/SLICE_2 to CompRS232/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C4A.CLK to       R7C4A.Q1 <A href="#@comp:CompRS232/SLICE_2">CompRS232/SLICE_2</A> (from <A href="#@net:S_UARTClock">S_UARTClock</A>)
+ROUTE         1     0.130<A href="#@net:CompRS232/n7:R7C4A.Q1:R7C4A.A1:0.130">       R7C4A.Q1 to R7C4A.A1      </A> <A href="#@net:CompRS232/n7">CompRS232/n7</A>
+CTOF_DEL    ---     0.101       R7C4A.A1 to       R7C4A.F1 <A href="#@comp:CompRS232/SLICE_2">CompRS232/SLICE_2</A>
+ROUTE         1     0.000<A href="#@net:CompRS232/n40:R7C4A.F1:R7C4A.DI1:0.000">       R7C4A.F1 to R7C4A.DI1     </A> <A href="#@net:CompRS232/n40">CompRS232/n40</A> (to <A href="#@net:S_UARTClock">S_UARTClock</A>)
+                  --------
+                    0.364   (64.3% logic, 35.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C4A.CLK,S_UARTClock">Source Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C4A.CLK:0.698">     LPLL.CLKOP to R7C4A.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C4A.CLK,S_UARTClock">Destination Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C4A.CLK:0.698">     LPLL.CLKOP to R7C4A.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.379ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CompRS232/SLICE_3">CompRS232/r_Clk_Count_89__i2</A>  (from <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+   Destination:    FF         Data in        <A href="#@comp:CompRS232/SLICE_3">CompRS232/r_Clk_Count_89__i2</A>  (to <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay CompRS232/SLICE_3 to CompRS232/SLICE_3 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:REG_DEL, 0.133,R7C4B.CLK,R7C4B.Q1,CompRS232/SLICE_3:ROUTE, 0.132,R7C4B.Q1,R7C4B.A1,CompRS232/r_Clk_Count_2:CTOF_DEL, 0.101,R7C4B.A1,R7C4B.F1,CompRS232/SLICE_3:ROUTE, 0.000,R7C4B.F1,R7C4B.DI1,CompRS232/n38">Data path</A> CompRS232/SLICE_3 to CompRS232/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C4B.CLK to       R7C4B.Q1 <A href="#@comp:CompRS232/SLICE_3">CompRS232/SLICE_3</A> (from <A href="#@net:S_UARTClock">S_UARTClock</A>)
+ROUTE         2     0.132<A href="#@net:CompRS232/r_Clk_Count_2:R7C4B.Q1:R7C4B.A1:0.132">       R7C4B.Q1 to R7C4B.A1      </A> <A href="#@net:CompRS232/r_Clk_Count_2">CompRS232/r_Clk_Count_2</A>
+CTOF_DEL    ---     0.101       R7C4B.A1 to       R7C4B.F1 <A href="#@comp:CompRS232/SLICE_3">CompRS232/SLICE_3</A>
+ROUTE         1     0.000<A href="#@net:CompRS232/n38:R7C4B.F1:R7C4B.DI1:0.000">       R7C4B.F1 to R7C4B.DI1     </A> <A href="#@net:CompRS232/n38">CompRS232/n38</A> (to <A href="#@net:S_UARTClock">S_UARTClock</A>)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C4B.CLK,S_UARTClock">Source Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C4B.CLK:0.698">     LPLL.CLKOP to R7C4B.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C4B.CLK,S_UARTClock">Destination Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C4B.CLK:0.698">     LPLL.CLKOP to R7C4B.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.379ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CompRS232/SLICE_0">CompRS232/r_Clk_Count_89__i6</A>  (from <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+   Destination:    FF         Data in        <A href="#@comp:CompRS232/SLICE_0">CompRS232/r_Clk_Count_89__i6</A>  (to <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay CompRS232/SLICE_0 to CompRS232/SLICE_0 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:REG_DEL, 0.133,R7C4D.CLK,R7C4D.Q1,CompRS232/SLICE_0:ROUTE, 0.132,R7C4D.Q1,R7C4D.A1,CompRS232/r_Clk_Count_6:CTOF_DEL, 0.101,R7C4D.A1,R7C4D.F1,CompRS232/SLICE_0:ROUTE, 0.000,R7C4D.F1,R7C4D.DI1,CompRS232/n34">Data path</A> CompRS232/SLICE_0 to CompRS232/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C4D.CLK to       R7C4D.Q1 <A href="#@comp:CompRS232/SLICE_0">CompRS232/SLICE_0</A> (from <A href="#@net:S_UARTClock">S_UARTClock</A>)
+ROUTE         2     0.132<A href="#@net:CompRS232/r_Clk_Count_6:R7C4D.Q1:R7C4D.A1:0.132">       R7C4D.Q1 to R7C4D.A1      </A> <A href="#@net:CompRS232/r_Clk_Count_6">CompRS232/r_Clk_Count_6</A>
+CTOF_DEL    ---     0.101       R7C4D.A1 to       R7C4D.F1 <A href="#@comp:CompRS232/SLICE_0">CompRS232/SLICE_0</A>
+ROUTE         1     0.000<A href="#@net:CompRS232/n34:R7C4D.F1:R7C4D.DI1:0.000">       R7C4D.F1 to R7C4D.DI1     </A> <A href="#@net:CompRS232/n34">CompRS232/n34</A> (to <A href="#@net:S_UARTClock">S_UARTClock</A>)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C4D.CLK,S_UARTClock">Source Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C4D.CLK:0.698">     LPLL.CLKOP to R7C4D.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C4D.CLK,S_UARTClock">Destination Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C4D.CLK:0.698">     LPLL.CLKOP to R7C4D.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.379ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CompRS232/SLICE_3">CompRS232/r_Clk_Count_89__i1</A>  (from <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+   Destination:    FF         Data in        <A href="#@comp:CompRS232/SLICE_3">CompRS232/r_Clk_Count_89__i1</A>  (to <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay CompRS232/SLICE_3 to CompRS232/SLICE_3 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:REG_DEL, 0.133,R7C4B.CLK,R7C4B.Q0,CompRS232/SLICE_3:ROUTE, 0.132,R7C4B.Q0,R7C4B.A0,CompRS232/r_Clk_Count_1:CTOF_DEL, 0.101,R7C4B.A0,R7C4B.F0,CompRS232/SLICE_3:ROUTE, 0.000,R7C4B.F0,R7C4B.DI0,CompRS232/n39">Data path</A> CompRS232/SLICE_3 to CompRS232/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C4B.CLK to       R7C4B.Q0 <A href="#@comp:CompRS232/SLICE_3">CompRS232/SLICE_3</A> (from <A href="#@net:S_UARTClock">S_UARTClock</A>)
+ROUTE         2     0.132<A href="#@net:CompRS232/r_Clk_Count_1:R7C4B.Q0:R7C4B.A0:0.132">       R7C4B.Q0 to R7C4B.A0      </A> <A href="#@net:CompRS232/r_Clk_Count_1">CompRS232/r_Clk_Count_1</A>
+CTOF_DEL    ---     0.101       R7C4B.A0 to       R7C4B.F0 <A href="#@comp:CompRS232/SLICE_3">CompRS232/SLICE_3</A>
+ROUTE         1     0.000<A href="#@net:CompRS232/n39:R7C4B.F0:R7C4B.DI0:0.000">       R7C4B.F0 to R7C4B.DI0     </A> <A href="#@net:CompRS232/n39">CompRS232/n39</A> (to <A href="#@net:S_UARTClock">S_UARTClock</A>)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C4B.CLK,S_UARTClock">Source Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C4B.CLK:0.698">     LPLL.CLKOP to R7C4B.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C4B.CLK,S_UARTClock">Destination Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C4B.CLK:0.698">     LPLL.CLKOP to R7C4B.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.379ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CompRS232/SLICE_1">CompRS232/r_Clk_Count_89__i4</A>  (from <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+   Destination:    FF         Data in        <A href="#@comp:CompRS232/SLICE_1">CompRS232/r_Clk_Count_89__i4</A>  (to <A href="#@net:S_UARTClock">S_UARTClock</A> +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay CompRS232/SLICE_1 to CompRS232/SLICE_1 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:REG_DEL, 0.133,R7C4C.CLK,R7C4C.Q1,CompRS232/SLICE_1:ROUTE, 0.132,R7C4C.Q1,R7C4C.A1,CompRS232/r_Clk_Count_4:CTOF_DEL, 0.101,R7C4C.A1,R7C4C.F1,CompRS232/SLICE_1:ROUTE, 0.000,R7C4C.F1,R7C4C.DI1,CompRS232/n36">Data path</A> CompRS232/SLICE_1 to CompRS232/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R7C4C.CLK to       R7C4C.Q1 <A href="#@comp:CompRS232/SLICE_1">CompRS232/SLICE_1</A> (from <A href="#@net:S_UARTClock">S_UARTClock</A>)
+ROUTE         2     0.132<A href="#@net:CompRS232/r_Clk_Count_4:R7C4C.Q1:R7C4C.A1:0.132">       R7C4C.Q1 to R7C4C.A1      </A> <A href="#@net:CompRS232/r_Clk_Count_4">CompRS232/r_Clk_Count_4</A>
+CTOF_DEL    ---     0.101       R7C4C.A1 to       R7C4C.F1 <A href="#@comp:CompRS232/SLICE_1">CompRS232/SLICE_1</A>
+ROUTE         1     0.000<A href="#@net:CompRS232/n36:R7C4C.F1:R7C4C.DI1:0.000">       R7C4C.F1 to R7C4C.DI1     </A> <A href="#@net:CompRS232/n36">CompRS232/n36</A> (to <A href="#@net:S_UARTClock">S_UARTClock</A>)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C4C.CLK,S_UARTClock">Source Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C4C.CLK:0.698">     LPLL.CLKOP to R7C4C.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY NET 'S_UARTClock' 10.230769 MHz ;:ROUTE, 0.698,LPLL.CLKOP,R7C4C.CLK,S_UARTClock">Destination Clock Path</A> CompClock/CompPll/PLLInst_0 to CompRS232/SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        19     0.698<A href="#@net:S_UARTClock:LPLL.CLKOP:R7C4C.CLK:0.698">     LPLL.CLKOP to R7C4C.CLK     </A> <A href="#@net:S_UARTClock">S_UARTClock</A>
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+</A><A name="FREQUENCY NET 'CompClock/osc_int' 133.000000 MH"></A>================================================================================
+Preference: FREQUENCY NET "CompClock/osc_int" 133.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+<A name="Report Summary"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "S_UARTClock" 10.230769   |             |             |
+MHz ;                                   |     0.000 ns|     0.304 ns|   1  
+                                        |             |             |
+FREQUENCY NET "CompClock/osc_int"       |             |             |
+133.000000 MHz ;                        |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="Clock Domains Analysis"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: <A href="#@net:P_Reset_c">P_Reset_c</A>   Source: P_Reset.PAD   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: <A href="#@net:w_TX_DONE">w_TX_DONE</A>   Source: CompRS232/SLICE_23.Q0   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: <A href="#@net:S_UARTClock">S_UARTClock</A>   Source: CompClock/CompPll/PLLInst_0.CLKOP   Loads: 19
+   Covered under: FREQUENCY NET "S_UARTClock" 10.230769 MHz ;
+
+   Data transfers from:
+   Clock Domain: <A href="#@net:P_Reset_c">P_Reset_c</A>   Source: P_Reset.PAD
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: <A href="#@net:w_TX_DONE">w_TX_DONE</A>   Source: CompRS232/SLICE_23.Q0
+      Covered under: FREQUENCY NET "S_UARTClock" 10.230769 MHz ;   Transfers: 4
+
+   Clock Domain: <A href="#@net:CompDataSelect/s_counter_2__N_70">CompDataSelect/s_counter_2__N_70</A>   Source: SLICE_28.F0
+      Covered under: FREQUENCY NET "S_UARTClock" 10.230769 MHz ;   Transfers: 1
+
+Clock Domain: <A href="#@net:CompClock/osc_int">CompClock/osc_int</A>   Source: CompClock/Clock.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 238 paths, 2 nets, and 199 connections (81.56% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)

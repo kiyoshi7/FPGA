@@ -1,0 +1,57 @@
+---------------------------------------------------
+Report for cell Main
+   Instance path: Main
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      28.00        100.0
+                                  LUT4	      39.00        100.0
+                                 IOBUF	          2        100.0
+                                PFUREG	         36        100.0
+                                RIPPLE	          4        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                  UART	          1        97.0
+                                 Clock	          1         0.0
+---------------------------------------------------
+Report for cell UART
+   Instance path: Main/CompUART
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      27.17        97.0
+                                  LUT4	      36.00        92.3
+                                PFUREG	         36        100.0
+                                RIPPLE	          4        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                           UART_TX(87)	          1        61.0
+                            DataSelect	          1        36.0
+---------------------------------------------------
+Report for cell UART_TX(87)
+   Instance path: Main/CompUART/CompRS232
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      17.08        61.0
+                                  LUT4	      23.00        59.0
+                                PFUREG	         22        61.1
+                                RIPPLE	          4        100.0
+---------------------------------------------------
+Report for cell DataSelect
+   Instance path: Main/CompUART/CompDataSelect
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      10.08        36.0
+                                  LUT4	      13.00        33.3
+                                PFUREG	         14        38.9
+---------------------------------------------------
+Report for cell Clock
+   Instance path: Main/CompClock
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                CLKPLL	          1         0.0
+---------------------------------------------------
+Report for cell CLKPLL
+   Instance path: Main/CompClock/CompPll
+                     Cell usage:
+                                  cell	      count    Res Usage(%)

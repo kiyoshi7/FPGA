@@ -1,0 +1,88 @@
+----------------------------------------------------------------------
+Report for cell Main.TECH
+Register bits:  36 of 7485 (0.481%)
+I/O cells:      2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4          100.0
+                            EHXPLLJ         1          100.0
+                            FD1P3AX         6          100.0
+                            FD1P3IX        13          100.0
+                             FD1S1A         2          100.0
+                             FD1S1B         2          100.0
+                            FD1S3AX         1          100.0
+                            FD1S3DX         3          100.0
+                            FD1S3IX         9          100.0
+                                GSR         1          100.0
+                            L6MUX21         1          100.0
+                               LUT4        38          100.0
+                                 OB         2          100.0
+                              PFUMX         2          100.0
+SUB MODULES
+                             CLKPLL         1
+                              Clock         1
+                         DataSelect         1
+                               UART         1
+                        UART_TX(87)         1
+                              TOTAL        90
+----------------------------------------------------------------------
+Report for cell UART.v1
+Instance Path : CompUART
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4          100.0
+                            FD1P3AX         6          100.0
+                            FD1P3IX        13          100.0
+                             FD1S1A         2          100.0
+                             FD1S1B         2          100.0
+                            FD1S3AX         1          100.0
+                            FD1S3DX         3          100.0
+                            FD1S3IX         9          100.0
+                            L6MUX21         1          100.0
+                               LUT4        36           94.7
+                              PFUMX         2          100.0
+SUB MODULES
+                         DataSelect         1
+                        UART_TX(87)         1
+                              TOTAL        81
+----------------------------------------------------------------------
+Report for cell UART_TX(87).v1
+Instance Path : CompUART.CompRS232
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4          100.0
+                            FD1P3AX         6          100.0
+                            FD1P3IX        13          100.0
+                            FD1S3IX         3           33.3
+                            L6MUX21         1          100.0
+                               LUT4        23           60.5
+                              PFUMX         2          100.0
+                              TOTAL        52
+----------------------------------------------------------------------
+Report for cell DataSelect.v1
+Instance Path : CompUART.CompDataSelect
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             FD1S1A         2          100.0
+                             FD1S1B         2          100.0
+                            FD1S3AX         1          100.0
+                            FD1S3DX         3          100.0
+                            FD1S3IX         6           66.7
+                               LUT4        13           34.2
+                              TOTAL        27
+----------------------------------------------------------------------
+Report for cell Clock.v1
+Instance Path : CompClock
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            EHXPLLJ         1          100.0
+SUB MODULES
+                             CLKPLL         1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell CLKPLL.v1
+Instance Path : CompClock.CompPll
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            EHXPLLJ         1          100.0
+                              TOTAL         1
