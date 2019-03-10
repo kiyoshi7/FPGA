@@ -1,0 +1,174 @@
+(edif counter
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2019 3 2 19 45 14)
+      (program "SCUBA" (version "Diamond (64-bit) 3.10.3.144"))))
+      (comment "C:\lscc\diamond\3.10_x64\ispfpga\bin\nt64\scuba.exe -w -n counter -lang vhdl -synth lse -bb -arch xo3c00a -type counter -up -width 2 -cnt_low 0 -cnt_up 3 ")
+  (library ORCLIB
+    (edifLevel 0)
+    (technology
+      (numberDefinition))
+    (cell CU2
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port CI
+            (direction INPUT))
+          (port PC0
+            (direction INPUT))
+          (port PC1
+            (direction INPUT))
+          (port CO
+            (direction OUTPUT))
+          (port NC0
+            (direction OUTPUT))
+          (port NC1
+            (direction OUTPUT)))))
+    (cell FADD2B
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port A0
+            (direction INPUT))
+          (port A1
+            (direction INPUT))
+          (port B0
+            (direction INPUT))
+          (port B1
+            (direction INPUT))
+          (port CI
+            (direction INPUT))
+          (port COUT
+            (direction OUTPUT))
+          (port S0
+            (direction OUTPUT))
+          (port S1
+            (direction OUTPUT)))))
+    (cell FD1P3DX
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port D
+            (direction INPUT))
+          (port SP
+            (direction INPUT))
+          (port CK
+            (direction INPUT))
+          (port CD
+            (direction INPUT))
+          (port Q
+            (direction OUTPUT)))))
+    (cell VHI
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell VLO
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell counter
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Clock
+            (direction INPUT))
+          (port Clk_En
+            (direction INPUT))
+          (port Aclr
+            (direction INPUT))
+          (port (rename Q0 "Q(0)")
+            (direction OUTPUT))
+          (port (rename Q1 "Q(1)")
+            (direction OUTPUT)))
+        (property NGD_DRC_MASK (integer 1))
+        (contents
+          (instance FF_1
+            (viewRef view1 
+              (cellRef FD1P3DX))
+            (property GSR
+              (string "ENABLED")))
+          (instance FF_0
+            (viewRef view1 
+              (cellRef FD1P3DX))
+            (property GSR
+              (string "ENABLED")))
+          (instance scuba_vlo_inst
+            (viewRef view1 
+              (cellRef VLO)))
+          (instance scuba_vhi_inst
+            (viewRef view1 
+              (cellRef VHI)))
+          (instance cnt_cia
+            (viewRef view1 
+              (cellRef FADD2B)))
+          (instance cnt_0
+            (viewRef view1 
+              (cellRef CU2)))
+          (net scuba_vlo
+            (joined
+              (portRef Z (instanceRef scuba_vlo_inst))
+              (portRef CI (instanceRef cnt_cia))
+              (portRef B0 (instanceRef cnt_cia))
+              (portRef A0 (instanceRef cnt_cia))))
+          (net scuba_vhi
+            (joined
+              (portRef Z (instanceRef scuba_vhi_inst))
+              (portRef B1 (instanceRef cnt_cia))
+              (portRef A1 (instanceRef cnt_cia))))
+          (net idataout0
+            (joined
+              (portRef NC0 (instanceRef cnt_0))
+              (portRef D (instanceRef FF_1))))
+          (net idataout1
+            (joined
+              (portRef NC1 (instanceRef cnt_0))
+              (portRef D (instanceRef FF_0))))
+          (net co0
+            (joined
+              (portRef CO (instanceRef cnt_0))))
+          (net cnt_ci
+            (joined
+              (portRef CI (instanceRef cnt_0))
+              (portRef COUT (instanceRef cnt_cia))))
+          (net dataout1
+            (joined
+              (portRef Q1)
+              (portRef PC1 (instanceRef cnt_0))
+              (portRef Q (instanceRef FF_0))))
+          (net dataout0
+            (joined
+              (portRef Q0)
+              (portRef PC0 (instanceRef cnt_0))
+              (portRef Q (instanceRef FF_1))))
+          (net clear
+            (joined
+              (portRef Aclr)
+              (portRef CD (instanceRef FF_1))
+              (portRef CD (instanceRef FF_0))))
+          (net enable
+            (joined
+              (portRef Clk_En)
+              (portRef SP (instanceRef FF_1))
+              (portRef SP (instanceRef FF_0))))
+          (net clk
+            (joined
+              (portRef Clock)
+              (portRef CK (instanceRef FF_1))
+              (portRef CK (instanceRef FF_0))))))))
+  (design counter
+    (cellRef counter
+      (libraryRef ORCLIB)))
+)

@@ -1,0 +1,39 @@
+[Device]
+Family=machxo3l
+PartType=LCMXO3L-6900C
+PartName=LCMXO3L-6900C-5BG256C
+SpeedGrade=5
+Package=CABGA256
+OperatingCondition=COM
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=Counter
+CoreRevision=4.6
+ModuleName=counter
+SourceFormat=VHDL
+ParameterFileVersion=1.0
+Date=03/02/2019
+Time=19:45:14
+
+[Parameters]
+Verilog=0
+VHDL=1
+EDIF=1
+Destination=Synplicity
+Expression=None
+Order=Big Endian [MSB:LSB]
+IO=0
+InputWidth=2
+CountType=Synchronous
+CountDirection=Up
+OptimizeSpeed=0
+Lower=0
+Upper=3
+Load=0
+
+[Command]
+cmd_line= -w -n counter -lang vhdl -synth lse -bb -arch xo3c00a -type mgcounter -width 2 -cnt_direction up -aclear -clken -cnt_low 0 -cnt_up 3
